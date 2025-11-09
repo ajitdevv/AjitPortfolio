@@ -111,6 +111,21 @@
         --card: #1e293b;
         /* + strong shadow */
     }
+
+    * {
+        @apply border-border;
+    }
+
+    html {
+        @apply scroll-smooth;
+    }
+
+    body {
+        @apply bg-background text-foreground transition-colors duration-300;
+        font-feature-settings: "rlig" 1, "calt" 1;
+        -webkit-font-feature-settings: "rlig" 1, "calt" 1;
+        -moz-font-feature-settings: "rlig" 1, "calt" 1;
+    }
 }
 
 @utility container {
@@ -167,4 +182,11 @@
 @utility meteor {
     @apply absolute bg-linear-to-r from-white to-transparent rounded-full;
     box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
+}
+
+#root{
+    max-width: 100%;
+    margin: 0 auto ;
+    padding: 0;
+    text-align: center;
 }

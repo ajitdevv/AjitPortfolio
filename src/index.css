@@ -133,7 +133,7 @@
         max-width: 1280px;
     }
 
-    @media (width>=1400px) {
+    @media (wi dth>=1400px) {
         max-width: 1400px;
     }
 
@@ -148,9 +148,23 @@
     @apply transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg;
 }
 
-@utility gradient-border{
+@utility gradient-border {
     @apply relative 16px;
     background: linear-gradient(to right, var(--card), var(--card));
     background-clip: padding-box;
     border: 1px solid transparent;
+}
+
+@utility cosmic-button {
+    @apply px-6 py-2 rounded-full bg-primary text-primary-foreground font-medium transition-all duration-300 hover:shadow-[0_4px_15px_rgba(255, 255, 255, 0.3)] hover:scale-95;
+}
+
+@utility star {
+    @apply absolute bg-white rounded-full;
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.4);
+}
+
+@utility meteor {
+    @apply absolute bg-linear-to-r from-white to-transparent rounded-full;
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
 }

@@ -164,14 +164,14 @@
 }
 
 @utility gradient-border {
-    @apply relative 16px;
+    @apply relative rounded-lg;
     background: linear-gradient(to right, var(--card), var(--card));
     background-clip: padding-box;
     border: 1px solid transparent;
 }
 
 @utility cosmic-button {
-    @apply px-6 py-2 rounded-full bg-primary text-primary-foreground font-medium transition-all duration-300 hover:shadow-[0_4px_15px_rgba(255, 255, 255, 0.3)] hover:scale-95;
+    @apply px-6 py-2 rounded-full bg-primary text-primary-foreground font-medium transition-all duration-300 hover:shadow-["0_4px_15px_rgba(255,255,255,0.3)"] hover:scale-95;
 }
 
 @utility star {
@@ -184,9 +184,9 @@
     box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
 }
 
-#root{
+#root {
     max-width: 100%;
-    margin: 0 auto ;
+    margin: 0 auto;
     padding: 0;
     text-align: center;
 }

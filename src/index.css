@@ -143,6 +143,14 @@
     @apply relative;
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
+
 @utility card-hover {
     @apply transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg;
+}
+
+@utility gradient-border{
+    @apply relative 16px;
+    background: linear-gradient(to right, var(--card), var(--card));
+    background-clip: padding-box;
+    border: 1px solid transparent;
 }

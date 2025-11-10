@@ -73,12 +73,12 @@
         }
 
         100% {
-            transform: translate(800px, 800px) rotate(140deg);
+            transform: translate(300px, 300px) rotate(140deg);
             opacity: 0;
-            -webkit-transform: translate(800px, 800px) rotate(140deg);
-            -moz-transform: translate(800px, 800px) rotate(140deg);
-            -ms-transform: translate(800px, 800px) rotate(140deg);
-            -o-transform: translate(800px, 800px) rotate(140deg);
+            -webkit-transform: translate(300px, 300px) rotate(140deg);
+            -moz-transform: translate(300px, 300px) rotate(140deg);
+            -ms-transform: translate(300px, 300px) rotate(140deg);
+            -o-transform: translate(300px, 300px) rotate(140deg);
 }
     }
 }

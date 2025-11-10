@@ -64,8 +64,8 @@ function Starbackground() {
           key={meteor.id}
           className="meteor animate-meteor"
           style={{
-            width: meteor.size + "px",
-            height: meteor.size * 50 + "px",
+            width: meteor.size +.4 + "px",
+            height: meteor.size * 25 + "px",
             left: meteor.x + "%",
             top: meteor.y + "%",
             animationDelay: meteor.delay,

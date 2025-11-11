@@ -7,7 +7,7 @@ function Starbackground() {
   useEffect(() => {
     generateStars();
     generateMeteors();
-    window.addEventListener("resize", generateStars);
+    window.addEventListener("resize", generateStars,generateMeteors);
   }, []);
   const generateStars = () => {
     const numberOfStars = Math.floor(
@@ -28,7 +28,7 @@ function Starbackground() {
     setStars(newStars);
   };
   const generateMeteors = () => {
-    const numberOfMeteors = 7;
+    const numberOfMeteors = 8;
 
     const newMeteors = [];
     for (let i = 0; i < numberOfMeteors; i++) {
@@ -64,7 +64,7 @@ function Starbackground() {
           key={meteor.id}
           className="meteor animate-meteor"
           style={{
-            width: meteor.size +.4 + "px",
+            width: meteor.size +"px",
             height: meteor.size * 25 + "px",
             left: meteor.x + "%",
             top: meteor.y + "%",

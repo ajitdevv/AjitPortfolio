@@ -60,12 +60,12 @@
 
     @keyframes meteor {
         0% {
-            transform: translate(0, 0) rotate(140deg);
+            transform: translate(0, 0) rotate(145deg);
             opacity: 1;
-            -webkit-transform: translate(0, 0) rotate(140deg);
-            -moz-transform: translate(0, 0) rotate(140deg);
-            -ms-transform: translate(0, 0) rotate(140deg);
-            -o-transform: translate(0, 0) rotate(140deg);
+            -webkit-transform: translate(0, 0) rotate(145deg);
+            -moz-transform: translate(0, 0) rotate(145deg);
+            -ms-transform: translate(0, 0) rotate(145deg);
+            -o-transform: translate(0, 0) rotate(145deg);
 }
 
         70% {
@@ -73,12 +73,12 @@
         }
 
         100% {
-            transform: translate(300px, 300px) rotate(140deg);
+            transform: translate(300px, 350px) rotate(145deg);
             opacity: 0;
-            -webkit-transform: translate(300px, 300px) rotate(140deg);
-            -moz-transform: translate(300px, 300px) rotate(140deg);
-            -ms-transform: translate(300px, 300px) rotate(140deg);
-            -o-transform: translate(300px, 300px) rotate(140deg);
+            -webkit-transform: translate(300px, 350px) rotate(145deg);
+            -moz-transform: translate(300px, 350px) rotate(145deg);
+            -ms-transform: translate(300px, 350px) rotate(145deg);
+            -o-transform: translate(300px, 350px) rotate(145deg);
 }
     }
 }

@@ -44,7 +44,7 @@ function Starbackground() {
     setMeteors(newMeteors);
   };
   return (
-    <div className="fixed inset-0 z-10 overflow-hidden pointer-events-none">
+    <div className="fixed inset-0 overflow-hidden pointer-events-none">
       {stars.map((star) => (
         <div
           key={star.id}

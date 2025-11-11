@@ -1,4 +1,5 @@
 import ThemeToggle from "../Components/ThemeTogggle";
+import Navbar from "../Components/Navbar";
 import Starbackground from "../Components/background";
 function home() {
   return (
@@ -9,7 +10,7 @@ function home() {
       <Starbackground />
 
       {/* Navbar */}
-
+      <Navbar />
       {/* Main content */}
 
       {/* Footer */}

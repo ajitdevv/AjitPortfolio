@@ -84,15 +84,15 @@
 }
 
 @layer base {
-    body {
+    :root {
         --border: #e5e7eb;
 
         --background: #ffffff;
-        --foreground: #f3f4f6;
+        --foreground: #e8e8e8;
 
 
         --primary: #111827;
-        --primary-foreground: #374151;
+        --primary-foreground: rgb(144, 146, 53);
 
         --card: #f9fafb;
         /* + light shadow */
@@ -106,7 +106,7 @@
         --foreground: #1e293b;
 
         --primary: #f8fafc;
-        --primary-foreground: #cbd5e1;
+        --primary-foreground: #d352da;
 
         --card: #1e293b;
         /* + strong shadow */

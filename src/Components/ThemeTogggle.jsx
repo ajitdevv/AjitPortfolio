@@ -28,7 +28,7 @@ function ThemeToggle() {
   };
   return (
     <button
-      onClick={toggleTheme} className="fixed top-4 right-4 z-50 p-2 rounded-full transition-colors duration-700 ease-in-out focus:outline-hidden hover:scale-110">
+      onClick={toggleTheme} className="fixed top-5.5 right-17 z-50 p-2 rounded-full transition-colors duration-700 ease-in-out focus:outline-hidden hover:scale-110">
       {isdarkmode ? (
         <Sun className="h-6 w-6 text-yellow-300 transition-transform duration-700 ease-in-out " />
       ) : (

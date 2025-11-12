@@ -8,11 +8,11 @@ function Herosection() {
     >
       <h1 className="text-5xl max-sm:w-50 font-bold">
         <span className="text-primary">Hi,I'm </span>
-        <span className="text-primary-foreground">Ajit </span>
-        <span className="text-primary">Dev</span>
+        <span className="text-primary-foreground">Frontend </span>
+        <span className="text-primary">Developer</span>
       </h1>
       <p className="text-primary w-120 gap-t-6 text-s text-center mt-4 max-sm:w-56 ">
-        passionate Web Developer blending code and creativity to build
+        passionate web Developer blending code and creativity to build
         modern,responsive, and impactful digital experiences."
       </p>
       <a href="#projects">

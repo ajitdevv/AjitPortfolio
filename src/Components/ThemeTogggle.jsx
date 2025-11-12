@@ -1,8 +1,7 @@
 import { Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
-// import { cn } from "@/lid/utils";
 function ThemeToggle() {
-  const [isdarkmode, setisdarkmode] = useState(true);
+  const [isdarkmode, setisdarkmode] = useState(false);
 
   useEffect(() => {
     const theme = localStorage.getItem("theme");
@@ -28,11 +27,11 @@ function ThemeToggle() {
   };
   return (
     <button
-      onClick={toggleTheme} className="fixed top-5.5 right-17 z-50 p-2 rounded-full transition-colors duration-700 ease-in-out focus:outline-hidden hover:scale-110">
+      onClick={toggleTheme} className="fixed top-4.5 right-17 z-50 p-2 rounded-full transition-colors duration-700 ease-in-out focus: outline-hidden hover:scale-110">
       {isdarkmode ? (
-        <Sun className="h-6 w-6 text-yellow-300 transition-transform duration-700 ease-in-out " />
+        <Sun className="h-6 w-6 text-[#d352da] t transition-transform duration-700 ease-in-out " />
       ) : (
-        <Moon className="h-6 w-6 text-indigo-500 transition-transform duration-700 ease-in-out " />
+        <Moon className="h-6 w-6 text-[#ffd700] transition-transform duration-700 ease-in-out " />
       )}
     </button>
   );

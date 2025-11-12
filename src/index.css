@@ -7,10 +7,12 @@
     --color-foreground: var(--foreground);
 
     --color-primary: var(--primary);
+    --color-accent: var(--accent);
     --color-primary-foreground: var(--primary-foreground);
 
     --color-card: var(--card);
 
+    --color-shadow: var(--shadow);
     --animate-float: float 6s ease-in-out infinite;
     --animate-pulse-subtle: pulse-subtle 4s ease-in-out infinite;
     --animate-fade-in: fade-in 0.7s ease-out forwards;
@@ -100,8 +102,10 @@
         --background: #FFFBEA;
         --foreground: #FFFFFF;
         --primary: #000000;
+        --accent:#d352da ;
         --primary-foreground: #FFD700;
         --card: #FFFDF5;
+        --shadow: rgba(0, 0, 0, 0.5) 0px 4px 6px 1px;
 
     }
 
@@ -112,10 +116,12 @@
         --foreground: #1e293b;
 
         --primary: #f8fafc;
-        --primary-foreground: #d352da;
+        --primary-foreground:#d352da;
+        --accent:#ffd700 ;
 
         --card: #22313F;
-        ;
+
+        --shadow: rgba(255, 255, 255, 0.3) 0px 4px 6px 1px;
         /* + strong shadow */
     }
 
@@ -177,10 +183,12 @@
         background-clip: padding-box;
         border: 1px solid transparent;
     }
-
+    
     .cosmic-button {
-        @apply px-6 py-2 rounded-full bg-primary text-primary-foreground font-medium transition-all duration-300 hover:shadow-["0_4px_15px_rgba(255,255,255,0.3)"] hover:scale-95;
+        @apply px-6 py-2 rounded-full bg-primary text-primary-foreground font-medium transition-all duration-300 hover:shadow-[var(--shadow)] hover:scale-95;
     }
+
+
 
     .star {
         @apply absolute bg-white rounded-full;

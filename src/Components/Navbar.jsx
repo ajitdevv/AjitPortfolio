@@ -8,6 +8,7 @@ function Navbar() {
     { name: "About", href: "#about" },
     { name: "Projects", href: "#projects" },
     { name: "Contact", href: "#contact" },
+    { name: "Resume", href: "#resume" },
   ];
 
   const [isDark, setIsDark] = useState(false);
@@ -43,7 +44,7 @@ function Navbar() {
         }
       >
         <img
-          className="w-8 h-9"
+          className="w-7 h-7"
           src={isDark ? logo : logo2}
           alt="logo not found"
         />

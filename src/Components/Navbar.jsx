@@ -25,7 +25,7 @@ function Navbar() {
     return () => observer.disconnect();
   }, []);
   return (
-    <nav >
+    <nav>
       <div className="w-full fixed hidden justify-around items-center mt-5 mb-4 sm:flex">
         <img className="w-8 h-9" src={isDark ? logo : logo2} alt="not" />
         <ul className="flex justify-center space-x-4">
@@ -38,31 +38,31 @@ function Navbar() {
           ))}
         </ul>
       </div>
-      <div
-        className={
-          "w-full fixed flex justify-between px-7 items-center mt-6 mb-4 sm:hidden"
-        }
-      >
+
+      <div className="w-full fixed top-0 left-0 flex justify-between px-7 items-center py-4 bg-background z-50 sm:hidden">
         <img
-          className="w-7 h-7"
+          className="w-7 h-8 mt-1.5"
           src={isDark ? logo : logo2}
           alt="logo not found"
         />
         <button
           onClick={() => setismenuopen(!ismenuopen)}
-          className="flex sm:hidden transition-transform duration-700 text-primary"
+          className="sm:hidden transition-transform mt-1.5 size-8 duration-700 text-primary"
         >
           {ismenuopen ? <X /> : <Menu />}
         </button>
       </div>
       <ul
-        className={`flex h-full flex-col bg-foreground items-center p-10 justify-center space-y-4  ${
-          ismenuopen ? "block" : "hidden"
+        className={`fixed top-0 left-0 w-full h-screen flex flex-col bg-foreground items-center justify-center space-y-6 transition-all duration-500 z-40 ${
+          ismenuopen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
       >
         {navitems.map((item) => (
-          <li key={item.name} className="first:not-only-of-type:mt-10" >
-            <a href={item.href} className="text-primary transition-transform duration-1 hover:underline">
+          <li key={item.name} className="first:not-only-of-type:mt-10 ">
+            <a onClick={() => setismenuopen(!ismenuopen)}
+              href={item.href}
+              className="text-primary transition-transform duration-1 hover:underline"
+            >
               {item.name}
             </a>
           </li>

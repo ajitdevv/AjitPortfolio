@@ -16,7 +16,7 @@ function Herosection() {
         modern,responsive, and impactful digital experiences."
       </p>
       <a href="#projects">
-        <button className="cosmic-button mt-10">See my work</button>
+        <button className="cosmic-button text-lg mt-10">See my work</button>
       </a>
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center justify-center animate-bounce ">
         <span className="text-sm mb-1 text-primary">Scroll</span>

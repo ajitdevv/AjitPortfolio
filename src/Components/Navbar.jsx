@@ -26,7 +26,7 @@ function Navbar() {
   }, []);
   return (
     <nav>
-      <div className="w-full fixed hidden justify-around items-center mt-5 mb-4 sm:flex">
+      <div className="w-full fixed z-100 hidden justify-around items-center mt-5 mb-4 sm:flex">
         <img className="w-8 h-9" src={isDark ? logo : logo2} alt="not" />
         <ul className="flex justify-center space-x-4">
           {navitems.map((item) => (

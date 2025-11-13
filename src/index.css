@@ -87,17 +87,6 @@
 
 @layer base {
     :root {
-        /* --border: #e5e7eb;
-
-        --background: #ffffff;
-        --foreground: #e8e8e8;
-
-
-        --primary: #111827;
-        --primary-foreground: rgb(144, 146, 53);
-
-        --card: #f9fafb; */
-        /* + light shadow */
         --border: #E5E5E5;
         --background: #FFFBEA;
         --foreground: #FFFFFF;

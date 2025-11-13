@@ -57,13 +57,14 @@ function About() {
           reality.
         </h3>
         <div className="mt-10 flex flex-row justify-around max-sm:flex-col max-sm:items-center max-sm:gap-4">
-          <a
-            data-aos="fade-right"
-            data-aos-offset="100"
-            className="cosmic-button text-lg"
-            href="#contact"
-          >
-            <button>Contact me</button>
+          <a href="#contact">
+            <button
+              data-aos="fade-right"
+              data-aos-offset="100"
+              className="cosmic-button text-lg"
+            >
+              Contact me
+            </button>
           </a>
           <a href="">
             <button

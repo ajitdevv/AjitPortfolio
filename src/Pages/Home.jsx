@@ -2,6 +2,7 @@ import ThemeToggle from "../Components/ThemeTogggle";
 import Navbar from "../Components/Navbar";
 import Starbackground from "../Components/background";
 import Herosection from "../Components/Herosection";
+import About from "../Components/About";
 function home() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
@@ -15,6 +16,7 @@ function home() {
       {/* Main content */}
        <main>
         <Herosection />
+        <About />
        </main>
       {/* Footer */}
     </div>

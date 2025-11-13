@@ -12,9 +12,7 @@ function Herosection() {
         <span className="text-primary">Developer</span>
       </h1>
       <p className="text-primary w-120 gap-t-6 text-s text-center mt-4 max-sm:w-56 ">
-        passionate web Developer blending code and creativity to build
-        modern,responsive, and impactful digital experiences."
-      </p>
+       "I bulid responsive, user-friendly frontend with modern web technologies, focused on clean and efficient code " </p>
       <a href="#projects">
         <button className="cosmic-button text-lg mt-10">See my work</button>
       </a>

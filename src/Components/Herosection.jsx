@@ -17,7 +17,7 @@ function Herosection() {
         <button className="cosmic-button text-lg mt-10">See my work</button>
       </a>
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center justify-center animate-bounce ">
-        <span className="text-sm mb-1 text-primary">Scroll</span>
+        <span className="text-sm mb-1 text-accent">Scroll</span>
         <MoveDown className="h-4 w-6 text-accent transition-transform duration-700 ease-in-out" />
       </div>
     </section>

@@ -13,11 +13,13 @@ function Skills() {
     Aos.init();
   }, []);
   return (
-    <section id="skills">
+    <section id="skills" className="h-full">
       <style>
         {`.inear{
         margin: 100px auto;
-        width: 90%;
+        width: 70%;
+        border-left: 2px solid black;
+        border-right: 2px solid black;
         display: flex;
         overflow-x: auto;
         }
@@ -71,17 +73,71 @@ function Skills() {
           <SiTailwindcss size={70} className="devv" color="#38B2AC" />
         </div>
       </div>
-      <div>
-        <h1
-          data-aos="fade-up"
-          data-aos-offset="50"
-          className="text-primary mb-2 text-5xl"
-        >
-          Start
-        </h1>
-      </div>
-      <div className="min-h-screen relative">
-        <div className="absolute top-1 bottom-0 left-1/2 -translate-x-1/2 w-1 bg-primary"></div>
+      <div className="relative">
+        <div className="[&>*]:z-[40] [&>*]:cursor-pointer [&>*]:hover:underline">
+          <h1
+            data-aos="fade-up"
+            data-aos-offset="50"
+            className="text-primary mb-6 text-5xl"
+          >
+            Start
+          </h1>
+          <h1
+            data-aos="fade-left"
+            data-aos-offset="70"
+            className="text-primary mb-2 text-5xlv absolute top-39 right-80 text-3xl max-sm:text-xl max-sm:right-6 "
+            onClick={() =>
+              document
+                .getElementById("about")
+                .scrollIntoView({ behavior: "smooth" })
+            }
+          >
+            HTML5
+          </h1>
+          <h1
+            data-aos="fade-right"
+            data-aos-offset="70"
+            className="text-primary mb-2 text-5xlv absolute top-64 left-85 text-3xl max-sm:text-xl max-sm:left-8 "
+          >
+            CSS 3
+          </h1>
+          <h1
+            data-aos="fade-left"
+            data-aos-offset="70"
+            className="text-primary mb-2 text-5xlv absolute top-89 right-71 text-3xl max-sm:text-xl max-sm:right-0 max-sm:wrap-normal  "
+          >
+            JavaScript
+          </h1>
+          <h1
+            data-aos="fade-right"
+            data-aos-offset="70"
+            className="text-primary mb-2 text-5xlv absolute top-114 left-80 text-3xl max-sm:text-xl max-sm:left-5 "
+          >
+            React.js
+          </h1>
+          <h1
+            data-aos="fade-left"
+            data-aos-offset="70"
+            className="text-primary mb-2 text-5xlv absolute top-139 right-64 text-3xl max-sm:text-xl max-sm:right-1 max-sm:wrap-normal  max-sm:w-20"
+          >
+            <a href="#home"> Tailwind CSS</a>
+          </h1>
+          <h1
+            data-aos="fade-down"
+            data-aos-offset="0"
+            className="text-primary absolute bottom-0 left-1/2 -translate-x-1/2 text-5xl max-sm:text-3xl max-sm:bottom-80 "
+          >
+            Progress..
+          </h1>
+        </div>
+        <div className="min-h-screen relative [&>*]:bg-accent">
+          <div className="absolute top-1 bottom-0 left-1/2 -translate-x-1/2 w-1 h-130"></div>
+          <div className="absolute top-25 bottom-0 left-1/2 -translate-x-0 w-50 h-1  max-sm:w-30"></div>
+          <div className="absolute top-50 bottom-0 right-1/2 -translate-x-0 w-50 h-1  max-sm:w-30"></div>
+          <div className="absolute top-75 bottom-0 left-1/2 -translate-x-0 w-50 h-1  max-sm:w-30"></div>
+          <div className="absolute top-100 bottom-0 right-1/2 -translate-x-0 w-50 h-1  max-sm:w-30"></div>
+          <div className="absolute top-125 bottom-0 left-1/2 -translate-x-0 w-50 h-1  max-sm:w-30"></div>
+        </div>
       </div>
     </section>
   );

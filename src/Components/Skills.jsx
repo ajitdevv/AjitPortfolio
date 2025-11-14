@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import Aos from "aos";
 import {
   SiCss3,
   SiHtml5,
@@ -7,6 +9,9 @@ import {
 } from "react-icons/si";
 
 function Skills() {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
     <section id="skills">
       <style>
@@ -42,29 +47,41 @@ function Skills() {
       </style>
       <div className="inear">
         <div className="flex group flex-row gap-10">
-          <SiHtml5 size={120} className="devv" color="#E34F26" />
-          <SiCss3 size={120} className="devv" color="#1572B6" />
-          <SiJavascript size={120} className="devv" color="#F7DF1E" />
-          <SiReact size={120} className="devv" color="#61DAFB" />
-          <SiTailwindcss size={120} className="devv" color="#38B2AC" />
-          <SiHtml5 size={120} className="devv" color="#E34F26" />
-          <SiCss3 size={120} className="devv" color="#1572B6" />
-          <SiJavascript size={120} className="devv" color="#F7DF1E" />
-          <SiReact size={120} className="devv" color="#61DAFB" />
-          <SiTailwindcss size={120} className="devv" color="#38B2AC" />
+          <SiHtml5 size={70} className="devv" color="#E34F26" />
+          <SiReact size={70} className="devv" color="#61DAFB" />
+          <SiCss3 size={70} className="devv" color="#1572B6" />
+          <SiTailwindcss size={70} className="devv" color="#38B2AC" />
+          <SiJavascript size={70} className="devv" color="#F7DF1E" />
+          <SiHtml5 size={70} className="devv" color="#E34F26" />
+          <SiReact size={70} className="devv" color="#61DAFB" />
+          <SiCss3 size={70} className="devv" color="#1572B6" />
+          <SiTailwindcss size={70} className="devv" color="#38B2AC" />
+          <SiJavascript size={70} className="devv" color="#F7DF1E" />
         </div>
         <div aria-hidden className="flex group flex-row gap-10">
-          <SiHtml5 size={120} className="devv" color="#E34F26" />
-          <SiCss3 size={120} className="devv" color="#1572B6" />
-          <SiJavascript size={120} className="devv" color="#F7DF1E" />
-          <SiReact size={120} className="devv" color="#61DAFB" />
-          <SiTailwindcss size={120} className="devv" color="#38B2AC" />
-          <SiHtml5 size={120} className="devv" color="#E34F26" />
-          <SiCss3 size={120} className="devv" color="#1572B6" />
-          <SiJavascript size={120} className="devv" color="#F7DF1E" />
-          <SiReact size={120} className="devv" color="#61DAFB" />
-          <SiTailwindcss size={120} className="devv" color="#38B2AC" />
+          <SiHtml5 size={70} className="devv" color="#E34F26" />
+          <SiReact size={70} className="devv" color="#61DAFB" />
+          <SiCss3 size={70} className="devv" color="#1572B6" />
+          <SiTailwindcss size={70} className="devv" color="#38B2AC" />
+          <SiJavascript size={70} className="devv" color="#F7DF1E" />
+          <SiHtml5 size={70} className="devv" color="#E34F26" />
+          <SiReact size={70} className="devv" color="#61DAFB" />
+          <SiCss3 size={70} className="devv" color="#1572B6" />
+          <SiJavascript size={70} className="devv" color="#F7DF1E" />
+          <SiTailwindcss size={70} className="devv" color="#38B2AC" />
         </div>
+      </div>
+      <div>
+        <h1
+          data-aos="fade-up"
+          data-aos-offset="50"
+          className="text-primary mb-2 text-5xl"
+        >
+          Start
+        </h1>
+      </div>
+      <div className="min-h-screen relative">
+        <div className="absolute top-1 bottom-0 left-1/2 -translate-x-1/2 w-1 bg-primary"></div>
       </div>
     </section>
   );

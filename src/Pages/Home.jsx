@@ -3,6 +3,7 @@ import Navbar from "../Components/Navbar";
 import Starbackground from "../Components/background";
 import Herosection from "../Components/Herosection";
 import About from "../Components/About";
+import Skills from "../Components/Skills";
 function home() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
@@ -14,10 +15,11 @@ function home() {
       {/* Navbar */}
       <Navbar />
       {/* Main content */}
-       <main>
+      <main>
         <Herosection />
         <About />
-       </main>
+        <Skills />
+      </main>
       {/* Footer */}
     </div>
   );

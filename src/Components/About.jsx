@@ -1,8 +1,12 @@
 import logo from "./reminihi.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 function About() {
+  // const [notdownload, setNotDownload] = useState(false);
+  // const handleCvDownload = () => {
+  //   window.open("https://www.pinterest.com/ideas/animation-pictures-for-dp/947758799274/","_blank");
+  // }
   useEffect(() => {
     AOS.init();
   }, []);
@@ -13,7 +17,7 @@ function About() {
     >
       <div className="about-float text-cover p-8 h-full w-[40%] text-center max-sm:w-[70%]">
         <h1
-          data-aos="fade-right"
+          data-aos="fade-up"
           data-aos-offset="50"
           className="text-primary bold text-5xl font-bold flex justify-start"
         >
@@ -21,7 +25,7 @@ function About() {
         </h1>
         <h2
           data-aos="fade-right"
-          data-aos-offset="100"
+          data-aos-offset="200"
           className="text-primary text-3xl mt-6 mx-auto max-w-auto"
           style={{ letterSpacing: "0.05rem" }}
         >
@@ -39,7 +43,7 @@ function About() {
         </h2>
         <p
           data-aos="fade-right"
-          data-aos-offset="100"
+          data-aos-offset="200"
           className="text-primary text-lg mt-6 max-w-auto mx-auto"
           style={{ letterSpacing: "0.05rem" }}
         >
@@ -50,30 +54,29 @@ function About() {
         </p>
         <h3
           data-aos="fade-right"
-          data-aos-offset="100"
+          data-aos-offset="200"
           className="text-primary text-2xl mt-6 max-w-auto mx-auto"
         >
           I craft modern digital experiences that transform your vision into
           reality.
         </h3>
-        <div className="mt-10 flex flex-row justify-around max-sm:flex-col max-sm:items-center max-sm:gap-4">
-          <a href="#contact">
-            <button
-              data-aos="fade-right"
-              data-aos-offset="100"
-              className="cosmic-button text-lg"
-            >
-              Contact me
-            </button>
+        <div className="mt-10 flex flex-row justify-around max-sm:flex-col max-sm:items-center max-sm:gap-4 ">
+          <a
+            className="cosmic-button text-lg"
+            href="#contact"
+            data-aos="fade-left"
+          data-aos-offset="100"
+          >
+            <button>Contact me</button>
           </a>
-          <a href="">
-            <button
-              data-aos="fade-left"
-              data-aos-offset="100"
-              className="cosmic-button text-lg"
-            >
-              Download CV
-            </button>
+          <a
+            className="cosmic-button text-lg"
+            href=""
+            data-aos="fade-right"
+          data-aos-offset="100"
+          // onClick={handleCvDownload ? setNotDownload(true) : setNotDownload(false)}
+          >
+            <button>Download CV</button>
           </a>
         </div>
       </div>

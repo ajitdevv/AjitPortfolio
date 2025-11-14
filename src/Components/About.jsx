@@ -2,11 +2,9 @@ import logo from "./reminihi.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 function About() {
-  // const [notdownload, setNotDownload] = useState(false);
-  // const handleCvDownload = () => {
-  //   window.open("https://www.pinterest.com/ideas/animation-pictures-for-dp/947758799274/","_blank");
-  // }
+  const navigate = useNavigate();
   useEffect(() => {
     AOS.init();
   }, []);
@@ -65,7 +63,7 @@ function About() {
             className="cosmic-button text-lg"
             href="#contact"
             data-aos="fade-left"
-          data-aos-offset="100"
+            data-aos-offset="100"
           >
             <button>Contact me</button>
           </a>
@@ -73,10 +71,10 @@ function About() {
             className="cosmic-button text-lg"
             href=""
             data-aos="fade-right"
-          data-aos-offset="100"
-          // onClick={handleCvDownload ? setNotDownload(true) : setNotDownload(false)}
+            data-aos-offset="100"
+            onClick={() => navigate("/Cv")}
           >
-            <button>Download CV</button>
+            <button>Resume</button>
           </a>
         </div>
       </div>

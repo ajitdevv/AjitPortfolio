@@ -13,7 +13,7 @@ function About() {
       id="about"
       className=" flex flex-row justify-center gap-[5%] w-full pt-20 max-sm:flex-col max-sm:items-center max-sm:text-center max-sm:gap-10 max-sm:pb-10"
     >
-      <div className="about-float text-cover p-8 h-full w-[40%] text-center max-sm:w-[70%]">
+      <div className=" text-cover p-8 h-full w-[40%] text-center max-sm:w-[70%]">
         <h1
           data-aos="fade-up"
           data-aos-offset="50"

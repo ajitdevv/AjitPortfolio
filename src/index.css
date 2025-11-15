@@ -105,7 +105,7 @@
     :root {
         --border: #E5E5E5;
         --background: #FFFBEA;
-        --foreground: #FFFFFF;
+        --foreground: #faf4d8;
         --primary: #000000;
         --accent: #d352da;
         --primary-foreground: #FFD700;
@@ -118,7 +118,8 @@
         --border: #334155;
 
         --background: #0f172a;
-        --foreground: #1e293b;
+        --foreground: #12171f;
+        /* --foreground: #10141a; */
 
         --primary: #f8fafc;
         --primary-foreground: #d352da;

@@ -4,6 +4,7 @@ import Starbackground from "../Components/background";
 import Herosection from "../Components/Herosection";
 import About from "../Components/About";
 import Skills from "../Components/Skills";
+import Projects from "../Components/Projects";
 function home() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
@@ -19,6 +20,7 @@ function home() {
         <Herosection />
         <About />
         <Skills />
+        <Projects />
       </main>
       {/* Footer */}
     </div>

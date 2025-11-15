@@ -93,7 +93,7 @@
         --primary: #000000;
         --accent: #d352da;
         --primary-foreground: #FFD700;
-        --card: #FFFDF5;
+        --card: #f3eac8;
         --shadow: rgba(0, 0, 0, 0.5) 0px 4px 6px 1px;
 
     }
@@ -108,7 +108,7 @@
         --primary-foreground: #d352da;
         --accent: #ffd700;
 
-        --card: #22313F;
+        --card: #1c252e;
 
         --shadow: rgba(255, 255, 255, 0.3) 0px 4px 6px 1px;
         /* + strong shadow */

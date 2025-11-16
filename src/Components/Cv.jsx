@@ -9,8 +9,8 @@ function Cv() {
   const navigate = useNavigate();
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "./reminihi.pdf"; // yaha EXACT file ka naam likho
-    link.download = "mycv.pdf"; // download hokar kaunsa naam ho ye
+    link.href = "./reminihi.pdf"; 
+    link.download = "mycv.pdf"; 
     link.click();
   };
   return (

@@ -1,9 +1,9 @@
 
-// function Footer() {
-//   return (
-//     <footer className="h-full">
+function Footer() {
+  return (
+    <footer className="h-full">
       
-//     </footer>
-//   );
-// }
-// export default Footer;
+    </footer>
+  );
+}
+export default Footer;

@@ -192,7 +192,7 @@ function Contact() {
               </div>
             </a>
             <a
-              href="tel:+918058339867"
+              href="https://wa.me/918058339867"
               target="_blank"
               data-aos="fade-up"
               data-aos-offset="150"
@@ -209,7 +209,7 @@ function Contact() {
               href="tel:+918058339867"
               target="_blank"
               data-aos="fade-up"
-              data-aos-offset="50"
+              data-aos-offset="150"
             >
               <div className="flex flex-row justify-between bg-foreground py-[20px] rounded-2xl hover:scale-110 transition-transform duration-300 ">
                 <h1 className="text-primary px-6  flex gap-2">

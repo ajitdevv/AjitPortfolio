@@ -1,20 +1,39 @@
 import { MoveDown } from "lucide-react";
-
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 function Herosection() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <section
       id="home"
       className="min-h-screen flex flex-col items-center justify-center"
     >
-      <h1 className="text-5xl max-sm:w-50 font-bold">
+      <h1
+        data-aos="fade-down"
+        data-aos-offset="150"
+        data-aos-duration="1000"
+        className="text-5xl max-sm:w-50 font-bold"
+      >
         <span className="text-primary">Hi,I'm </span>
         <span className="text-primary-foreground">Frontend </span>
         <span className="text-primary">Developer</span>
       </h1>
       <p className="text-primary w-120 gap-t-6 text-s text-center mt-4 max-sm:w-56 ">
-       "I bulid responsive, user-friendly frontend with modern web technologies, focused on clean and efficient code " </p>
+        "I bulid responsive, user-friendly frontend with modern web
+        technologies, focused on clean and efficient code "{" "}
+      </p>
       <a href="#projects">
-        <button className="cosmic-button text-lg mt-10">See my work</button>
+        <button
+          data-aos="fade-up"
+          data-aos-offset="150"
+          data-aos-duration="1000"
+          className="cosmic-button text-lg mt-10"
+        >
+          See my work
+        </button>
       </a>
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center justify-center animate-bounce ">
         <span className="text-sm mb-1 text-accent">Scroll</span>
@@ -24,4 +43,3 @@ function Herosection() {
   );
 }
 export default Herosection;
-

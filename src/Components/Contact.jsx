@@ -19,9 +19,9 @@ function Contact() {
   return (
     <section id="contact">
       <div className=" flex flex-col justify-around w-full pt-20">
-        <div className="w-full flex felx-row justify-center items-center max-sm:flex-col">
+        <div className="w-full flex felx-row justify-center items-center max-sm:flex-col max-sm:gap-10  ">
           <div
-            /* form container*/ className="w-[40%] flex flex-col items-start text-primary "
+            /* form container*/ className="w-[40%] max-sm:w-full flex flex-col items-start text-primary max-sm:justify-center max-sm:items-center"
           >
             <h1
               data-aos="fade-up"
@@ -33,11 +33,11 @@ function Contact() {
             <form
               action="https://formspree.io/f/mzzaewzd"
               method="POST"
-              className="flex flex-col rounded-2xl w-[90%] bg-foreground p-3"
+              className="flex flex-col rounded-2xl w-[90%] bg-foreground p-3 max-sm:pb-9"
             >
               <div
                 data-aos="fade-left"
-                data-aos-offset="150"
+                data-aos-offset="150"   
                 className="flex flex-row w-full jestify-srart font-bold text-2xl text-primary/70"
               >
                 <h1>Say hi..</h1>
@@ -108,8 +108,8 @@ function Contact() {
               </div>
               <div>
                 <button
-                  data-aos="fade-bottom"
-                  data-aos-offset="150"
+                  data-aos="fade-in"
+                  data-aos-offset="50"
                   type="submit"
                   className="cosmic-button w-[90%]"
                 >
@@ -119,7 +119,7 @@ function Contact() {
             </form>
           </div>
           <div
-            /* socal midea container*/ className="w-[35%] flex flex-col gap-2"
+            /* socal midea container*/ className="w-[35%] max-sm:w-[90%] max-sm:justify-center  flex flex-col gap-2"
           >
             <a
               href="https://www.instagram.com/ajitdevv/"

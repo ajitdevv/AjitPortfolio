@@ -3,7 +3,9 @@ import project2 from "./moviewebsite.png";
 import project3 from "./portfoliowebsite.png";
 import { ArrowRight } from "lucide-react";
 import { SiGit } from "react-icons/si";
-import { useState } from "react";
+import { useState,useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const projects = [
   {
     id: 1,
@@ -19,7 +21,7 @@ const projects = [
     id: 2,
     title: "Movie day ",
     Description:
-      "Developed a sleek and responsive Movie Web App that allows users to browse, search, and explore detailed information about movies through a clean and modern UI. Integrated a real-time Movies API to fetch live movie data, ensuring accurate and dynamic content updates.The application is fully optimized for mobile and desktop, offering a fast and smooth user experience.Deployed on Vercel, providing global CDN delivery, high performance, and reliable uptime.",
+      "Built a responsive Movie Web App with a clean UI, allowing users to browse, search, and explore movie details. Integrated a real-time Movies API for dynamic content. Optimized for mobile and desktop, and deployed on Vercel for fast, reliable performance.",
     image: project2,
     tags: ["React.js, ", "tailwind CSS, ", "API, ", "Vercel"],
     demoUrl: "https://movie-app-nine-opal.vercel.app/",
@@ -37,6 +39,9 @@ const projects = [
   },
 ];
 function Project() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   const [expandId, setexpandId] = useState(null);
 
   const toggleExpand = (id) => {
@@ -45,22 +50,27 @@ function Project() {
   return (
     <section
       id="projects"
-      className="mt-15 w-full max-sm:mt-[-250px] flex flex-col items-center justify-center "
+      className="mt-15 w-full max-sm:mt-[-200px] flex flex-col items-center justify-center "
     >
       <div className=" ">
-        <h1 className="text-primary bold text-5xl font-bold  flex justify-start  mb-6">
+        <h1 
+              data-aos="fade-right"
+              data-aos-offset="150" className="text-primary-foreground bold text-5xl font-bold  flex justify-start  mb-6 ">
           Projects
         </h1>
       </div>
-      <div className="flex flex-row flex-wrap justify-center gap-5">
+      <div className="flex flex-row flex-wrap max-sm:flex-col  justify-center gap-5">
         {projects.map((project, key) => {
           const isExpanded = expandId === project.id;
           const shortText = project.Description.substring(0, 20);
           return (
             <div
+            
+              data-aos="fade-up"
+              data-aos-offset="150"
               key={key}
-              className="flex flex-col items-center justify-center p-3 rounded-2xl  bg-foreground w-120 h-80 overflow-hidden"
-            >
+              className="flex flex-col items-center max-sm:flex-col max-sm:w-100 justify-center p-3 rounded-2xl  bg-foreground w-120 h-80 overflow-hidden"
+              >
               <div className="overflow-hidden rounded-2xl ">
                 <img
                   className="w-100 h-70 hover:scale-105 rounded-2xl transition-transform duration-300"

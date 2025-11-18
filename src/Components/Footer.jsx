@@ -1,9 +1,14 @@
 import { BsGithub, BsInstagram, BsLinkedin } from "react-icons/bs";
-
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 function Footer() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <>
-      <div className="w-full">
+      <div data-aos="fade-up" data-aos-offset="300" className="w-full">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1440 320"
@@ -17,17 +22,19 @@ function Footer() {
           <div>
             <h1 className="text-3xl font-bold text-primary">Ajit Dev</h1>
             <p className="text-sm mt-3 text-gray-400 max-w-xs">
-              Full Stack Developer – creating modern and creative web
-              experiences.
+              Frontend developer – creating modern and creative web experiences.
             </p>
             <div className="flex gap-5 mt-4">
-              <a href="https://instagram.com" target="_blank">
+              <a href="https://www.instagram.com/ajitdevv/" target="_blank">
                 <BsInstagram className="w-6 h-6 hover:scale-125 transition-transform" />
               </a>
-              <a href="https://github.com" target="_blank">
+              <a href="https://github.com/ajitdevv" target="_blank">
                 <BsGithub className="w-6 h-6 hover:scale-125 transition-transform" />
               </a>
-              <a href="https://linkedin.com" target="_blank">
+              <a
+                href="https://www.linkedin.com/in/ajeet-dev-947287330/"
+                target="_blank"
+              >
                 <BsLinkedin className="w-6 h-6 hover:scale-125 transition-transform" />
               </a>
             </div>
@@ -40,6 +47,9 @@ function Footer() {
             <a href="#about" className="text-gray-400 hover:text-primary">
               About
             </a>
+            <a href="#skills" className="text-gray-400 hover:text-primary">
+              Skills
+            </a>
             <a href="#projects" className="text-gray-400 hover:text-primary">
               Projects
             </a>
@@ -49,8 +59,8 @@ function Footer() {
           </div>
           <div>
             <h2 className="text-xl font-semibold mb-2">Contact</h2>
-            <p className="text-gray-400">Email: yourname@gmail.com</p>
-            <p className="text-gray-400">Phone: +91 12345 67890</p>
+            <p className="text-gray-400">Email: Ajitdev014@gamil.com</p>
+            <p className="text-gray-400">Phone: +91 80583 39867</p>
           </div>
         </div>
         <div className="text-center text-gray-500 mt-8 text-sm">

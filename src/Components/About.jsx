@@ -1,4 +1,4 @@
-import logo from "./reminihi.png";
+import logo from "./musicwebsite.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useState, useEffect } from "react";
@@ -79,7 +79,10 @@ function About() {
         </div>
       </div>
       <div data-aos="fade-left" className="w-[30%]">
-        <img className="flex items-center justify-center" src={logo} alt="" />
+        <img
+          src={logo}
+          className="w-60 md:w-80 rounded-xl shadow-xl object-cover"
+        />
       </div>
     </section>
   );

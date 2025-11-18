@@ -182,10 +182,11 @@
     }
 
     .primary-button {
-        @apply px-2 py-1 rounded-full bg-background text-accent font-medium transition-all duration-300  hover:scale-95;
+        @apply px-2 py-1 rounded-full bg-background text-accent font-medium transition-all duration-300 hover:scale-95;
     }
+
     .highlight-text {
-        @apply px-2 rounded-full bg-background text-primary ;
+        @apply px-2 rounded-full bg-background text-primary;
     }
 
 
@@ -199,15 +200,16 @@
         @apply absolute bg-linear-to-r from-white to-transparent rounded-full;
         box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.441);
     }
-}
 
-#root {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0;
-    text-align: center;
-}
 
-html {
-    scroll-behavior: smooth;
+    #root {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        text-align: center;
+    }
+
+    html {
+        /* scroll-behavior: smooth; */
+    }
 }

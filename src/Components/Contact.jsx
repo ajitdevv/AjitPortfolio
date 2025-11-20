@@ -130,7 +130,7 @@ function Contact() {
               <div className="flex flex-row justify-between bg-foreground py-[20px] rounded-2xl hover:scale-110 transition-transform duration-300">
                 <h1 className="text-primary px-6 flex gap-2">
                   <BsInstagram className="text-primary size-8" />
-                  /www.instagram.com/ajitdevv/
+                  instagram.com/ajitdevv/
                 </h1>
                 <ArrowRight className="text-primary" />
               </div>
@@ -144,7 +144,7 @@ function Contact() {
               <div className="flex flex-row justify-between bg-foreground py-[20px] rounded-2xl hover:scale-110 transition-transform duration-300">
                 <h1 className="text-primary px-6  flex gap-2">
                   <BsGithub className="text-primary size-8" />
-                  /github.com/ajitdevv
+                  github.com/ajitdevv
                 </h1>
                 <ArrowRight className="text-primary" />
               </div>
@@ -158,7 +158,7 @@ function Contact() {
               <div className="flex flex-row justify-between bg-foreground py-[20px] rounded-2xl hover:scale-110 transition-transform duration-300">
                 <h1 className="text-primary px-6  flex gap-2">
                   <BsLinkedin className="text-primary size-8" />
-                  /www.linkedin.com/in/ajeet-dev-947287330/
+                  linkedin.com
                 </h1>
                 <ArrowRight className="text-primary" />
               </div>
@@ -186,7 +186,7 @@ function Contact() {
               <div className="flex flex-row justify-between bg-foreground py-[20px] rounded-2xl hover:scale-110 transition-transform duration-300 ">
                 <h1 className="text-primary px-6  flex gap-2">
                   <BsTwitter className="text-primary size-8" />
-                  /x.com/ajitdevv
+                  x.com/ajitdevv
                 </h1>
                 <ArrowRight className="text-primary" />
               </div>
@@ -225,4 +225,4 @@ function Contact() {
     </section>
   );
 }
-export default Contact;
+// export default Contact;

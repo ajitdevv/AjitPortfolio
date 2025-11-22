@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-// import { useEffect } from "react";
 function Starbackground() {
   const [stars, setStars] = useState([]);
   const [meteors, setMeteors] = useState([]);

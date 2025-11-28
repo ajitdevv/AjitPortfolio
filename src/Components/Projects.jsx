@@ -52,7 +52,7 @@ function Project() {
       id="projects"
       className="mt-15 w-full max-sm:mt-[-200px] flex flex-col items-center justify-center "
     >
-      <div className=" ">
+      {/* <div className=" "> */}
         <h1 
               data-aos="fade-right"
               data-aos-offset="150" className="text-primary-foreground bold text-5xl font-bold  flex justify-start  mb-6 ">

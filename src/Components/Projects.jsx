@@ -49,7 +49,7 @@ function Project() {
   };
   return (
     <section
-      id="projects"
+      // id="projects"
       className="mt-15 w-full max-sm:mt-[-200px] flex flex-col items-center justify-center "
     >
       <div className=" ">

@@ -79,10 +79,10 @@ function Skills() {
           >
             Start
           </h1>
-          <div className="w-1 bg-accent h-[432px] lg:h-[540px] relative"></div>
+          <div className="w-1 bg-accent h-[432px] lg:h-[632px] relative"></div>
           <div className="size-4 rounded-full bg-accent top-28 absolute"></div>
           <div className="absolute top-40 lg:top-50 left-1/2 flex items-center gap-4">
-            <div className="w-24 sm:w-57 lg:w-70 h-1 bg-accent"></div>
+            <div className="w-24 sm:w-57 lg:w-65 h-1 bg-accent"></div>
             <h2
               data-aos="fade-left"
               data-aos-offset="70"
@@ -91,7 +91,6 @@ function Skills() {
               HTML5
             </h2>
           </div>
-
           <div className="absolute top-60 lg:top-80 right-1/2 flex items-center gap-4">
             <h2
               data-aos="fade-right"
@@ -100,11 +99,10 @@ function Skills() {
             >
               CSS 3
             </h2>
-            <div className="w-24 sm:w-57 lg:w-70 h-1 bg-accent"></div>
+            <div className="w-24 sm:w-57 lg:w-65 h-1 bg-accent"></div>
           </div>
-
           <div className="absolute top-80 lg:top-110 left-1/2 flex items-center gap-4">
-            <div className="w-24 sm:w-57 lg:w-70 h-1 bg-accent"></div>
+            <div className="w-24 sm:w-57 lg:w-65 h-1 bg-accent"></div>
             <h2
               data-aos="fade-left"
               data-aos-offset="70"
@@ -126,7 +124,7 @@ function Skills() {
           </div>
 
           <div className="absolute top-120 lg:top-160 left-1/2 flex items-center gap-4">
-            <div className="w-24 sm:w-57 lg:w-70 h-1 bg-accent"></div>
+            <div className="w-24 sm:w-57 lg:w-65 h-1 bg-accent"></div>
             <h2
               data-aos="fade-left"
               data-aos-offset="70"
@@ -135,8 +133,6 @@ function Skills() {
               Tailwind CSS
             </h2>
           </div>
-
-          {/* Bottom */}
           <h1
             data-aos="fade-down"
             data-aos-offset="0"
@@ -144,70 +140,7 @@ function Skills() {
           >
             Progress..
           </h1>
-          {/* <div>
-          <h1
-            data-aos="fade-up"
-            data-aos-offset="50"
-            className="text-primary mb-6 text-5xl"
-          >
-            Start
-          </h1>
-          <h1
-            data-aos="fade-left"
-            data-aos-offset="70"
-            className="text-primary mb-2 text-5xlv absolute top-39 right-80 text-3xl max-sm:text-xl max-sm:right-6 z-[40] cursor-pointer hover:underline"
-            onClick={() =>
-              document
-                .getElementById("about")
-                .scrollIntoView({ behavior: "smooth" })
-            }
-          >
-            HTML5
-          </h1>
-          <h1
-            data-aos="fade-right"
-            data-aos-offset="70"
-            className="text-primary mb-2 text-5xlv absolute top-64 left-85 text-3xl max-sm:text-xl max-sm:left-8 z-[40] cursor-pointer hover:underline"
-          >
-            CSS 3
-          </h1>
-          <h1
-            data-aos="fade-left"
-            data-aos-offset="70"
-            className="text-primary mb-2 text-5xlv absolute top-89 right-71 text-3xl max-sm:text-xl max-sm:right-0 max-sm:wrap-normal  z-[40] cursor-pointer hover:underline"
-          >
-            JavaScript
-          </h1>
-          <h1
-            data-aos="fade-right"
-            data-aos-offset="70"
-            className="text-primary mb-2 text-5xlv absolute top-114 left-80 text-3xl max-sm:text-xl max-sm:left-5 z-[40] cursor-pointer hover:underline"
-          >
-            React.js
-          </h1>
-          <h1
-            data-aos="fade-left"
-            data-aos-offset="70"
-            className="text-primary mb-2 text-5xlv absolute top-139 right-64 text-3xl max-sm:text-xl max-sm:right-1 max-sm:wrap-normal  max-sm:w-20 z-[40] cursor-pointer hover:underline"
-          >
-            <a href="#home"> Tailwind CSS</a>
-          </h1>
-          <h1
-            data-aos="fade-down"
-            data-aos-offset="0"
-            className="text-primary absolute bottom-0 left-1/2 -translate-x-1/2 text-5xl max-sm:text-3xl max-sm:bottom-80"
-          >
-            Progress..
-          </h1> */}
         </div>
-        {/* <div className="min-h-screen relative [&>*]:bg-accent">
-          <div className="absolute top-1 bottom-0 left-1/2 -translate-x-1/2 w-1 h-130"></div>
-          <div className="absolute top-25 bottom-0 left-1/2 -translate-x-0 w-50 h-1  max-sm:w-30"></div>
-          <div className="absolute top-50 bottom-0 right-1/2 -translate-x-0 w-50 h-1  max-sm:w-30"></div>
-          <div className="absolute top-75 bottom-0 left-1/2 -translate-x-0 w-50 h-1  max-sm:w-30"></div>
-          <div className="absolute top-100 bottom-0 right-1/2 -translate-x-0 w-50 h-1  max-sm:w-30"></div>
-          <div className="absolute top-125 bottom-0 left-1/2 -translate-x-0 w-50 h-1  max-sm:w-30"></div>
-        </div>*/}
       </div>
     </section>
   );

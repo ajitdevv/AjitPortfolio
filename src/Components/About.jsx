@@ -1,4 +1,4 @@
-import logo from "./musicwebsite.png";
+import logo from "./Portfoliodev.jpg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useState, useEffect } from "react";
@@ -11,7 +11,7 @@ function About() {
   return (
     <section
       id="about"
-      className=" flex flex-row justify-center gap-[5%] w-full pt-20 max-sm:flex-col max-sm:items-center max-sm:text-center max-sm:gap-10 max-sm:pb-10"
+      // className=" flex flex-row justify-center gap-[5%] w-full pt-20 max-sm:flex-col max-sm:items-center max-sm:text-center max-sm:gap-10 max-sm:pb-10"
     >
       <div className="p-8 h-full w-[40%] text-justify max-sm:w-[90%]">
         <h1
@@ -78,10 +78,10 @@ function About() {
           </a>
         </div>
       </div>
-      <div data-aos="fade-left" className="w-[30%]">
+      <div data-aos="fade-left" className="w-[30%] items-center justify-center flex max-sm:w-[70%]">
         <img
           src={logo}
-          className="w-60 md:w-80 rounded-xl shadow-xl object-cover"
+          className="h-[70% rounded-4xl shadow-xl object-cover"
         />
       </div>
     </section>

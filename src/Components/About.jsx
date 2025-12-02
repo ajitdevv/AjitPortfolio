@@ -11,7 +11,7 @@ function About() {
   return (
     <section
       id="about"
-      className=" flex flex-row justify-center gap-[5%] w-full pt-20 max-sm:flex-col max-sm:items-center max-sm:text-center max-sm:gap-10 max-sm:pb-10"
+      // className=" flex flex-row justify-center gap-[5%] w-full pt-20 max-sm:flex-col max-sm:items-center max-sm:text-center max-sm:gap-10 max-sm:pb-10"
     >
       <div className="p-8 h-full w-[40%] text-justify max-sm:w-[90%]">
         <h1

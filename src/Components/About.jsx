@@ -2,7 +2,7 @@ import logo from "./Portfoliodev.jpg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 function About() {
   const navigate = useNavigate();
   useEffect(() => {
@@ -67,15 +67,18 @@ function About() {
           >
             <button>Contact me</button>
           </a>
-          <a
-            className="cosmic-button w-[45%] justify-center items-center flex text-lg"
-            href=""
+          <Link to="/about/cv" className="cosmic-button w-[45%] justify-center items-center flex text-lg" data-aos="fade-right" data-aos-offset="100">
+            <button>Resume</button>
+          </Link>
+          
+          {/* <a
+            className="cosmic-button w-[45%] justify-center flex items-center text-lg"
+            href="/about/cv"
             data-aos="fade-right"
             data-aos-offset="100"
-            onClick={() => navigate("/Cv")}
           >
             <button>Resume</button>
-          </a>
+          </a> */}
         </div>
       </div>
       <div data-aos="fade-left" className="w-[30%] items-center justify-center flex max-sm:w-[70%]">

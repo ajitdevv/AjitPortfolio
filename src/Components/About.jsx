@@ -4,7 +4,7 @@ import "aos/dist/aos.css";
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 function About() {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   useEffect(() => {
     AOS.init();
   }, []);

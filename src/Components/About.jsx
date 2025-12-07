@@ -6,7 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 function About() {
   const navigate = useNavigate();
   useEffect(() => {
-    AOS.init();
+    // AOS.init();
   }, []);
   return (
     <section

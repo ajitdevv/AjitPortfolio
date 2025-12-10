@@ -14,72 +14,77 @@ const skills = [
   {
     id: 1,
     title: "Git",
-    image: <SiGit />,
+    Icon: SiGit,
+    color: "#F1502F",
     exprince: "1+ Year",
     type: "Tools",
   },
   {
     id: 2,
     title: "Github",
-    image: <SiGithub />,
+    Icon: SiGithub,
+    color: "#181717",
     exprince: "1+ Year",
-
     type: "Tools",
   },
   {
     id: 3,
-    title: "Versal",
-    image: <SiGit />,
+    title: "Vercel",
+    Icon: SiGit,
+    color: "#000000",
     exprince: "1+ Year",
-
     type: "Tools",
   },
   {
     id: 4,
     title: "Figma",
-    image: <SiFigma />,
+    Icon: SiFigma,
+    color: "#F24E1E",
     exprince: "1.5+ Year",
-
     type: "Tools",
   },
   {
     id: 5,
-    title: "Chatgpt",
-    image: <SiGit />,
+    title: "ChatGPT",
+    Icon: SiGit,
+    color: "#10A37F",
     exprince: "3+ Year",
     type: "Tools",
   },
   {
     id: 6,
-    title: "vs code",
+    title: "VS Code",
+    Icon: SiGit,
+    color: "#007ACC",
     exprince: "3+ Year",
-    image: <SiGit />,
     type: "Tools",
   },
   {
     id: 7,
     title: "HTML",
-    image: <SiHtml5 />,
+    Icon: SiHtml5,
+    color: "#E34F26",
     exprince: "3+ Year",
-
     type: "Frontend",
   },
   {
     id: 8,
     title: "CSS",
-    image: <SiGit />,
+    Icon: SiCss3,
+    color: "#1572B6",
     exprince: "3+ Year",
-
     type: "Frontend",
   },
   {
     id: 9,
-    title: "Javascript",
-    image: <SiGit />,
+    title: "JavaScript",
+    Icon: SiJavascript,
+    color: "#F7DF1E",
     exprince: "2+ Year",
     type: "All",
   },
 ];
+
 
 const cetegry = ["All" , "Frontend" , "Backend" , "Tools"]
 
@@ -217,29 +222,29 @@ function Skills() {
           </h1>
         </div>
       </div>
+      <hr className="mt-3" />
       <div className="w-full">
-        <div>
+        <div className="flex gap-4 items-center justify-center mt-5 mb-7">
           {cetegry.map((cetegry , key)=>{
             return(
-              <div key={key} className="text-primary font-bold">{cetegry}</div>
+      
+              <div key={key} className="text-primary font-bold click:bg-accent active:text-primary ">{cetegry}</div>
+            
             )
           })}
         </div>
-        <div className="flex flex-row gap-16">
+        <div className="grid grid-cols-4 items-center-safe justify-center gap-16">
           {skills.map((skill, key) => {
             return (
               <div
                 key={key}
-                className="flex flex-row card items-start rounded-2xl size"
+                className="flex flex-row w-38 gap-2 card items-start rounded-2xl size"
               >
                 <div>
-                  <img
-                    className="size-15"
-                    src={skill.image}
-                    alt="image not found"
-                  />
+                 <skill.Icon size={40} color={skill.color} />
+                 
                 </div>
-                <div className="items-start">
+                <div className="items-start ">
                   <h1 className="text-primary font-bold">{skill.title}</h1>
                   <h3 className="text-primary pl-1 w-max">{skill.exprince}</h3>
                 </div>

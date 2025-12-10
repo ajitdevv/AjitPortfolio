@@ -185,8 +185,12 @@
         @apply px-2 py-1 rounded-full bg-background text-accent font-medium transition-all duration-300 hover:scale-95;
     }
 
-    .highlight-text {
+    /* .highlight-text {
         @apply px-2 rounded-full bg-background text-primary;
+    } */
+
+    .card{
+        @apply p-3 rounded-2xl bg-card
     }
 
 

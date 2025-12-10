@@ -2,11 +2,86 @@ import { useEffect } from "react";
 import Aos from "aos";
 import {
   SiCss3,
+  SiFigma,
+  SiGit,
+  SiGithub,
   SiHtml5,
   SiJavascript,
   SiReact,
   SiTailwindcss,
 } from "react-icons/si";
+const skills = [
+  {
+    id: 1,
+    title: "Git",
+    image: <SiGit />,
+    exprince: "1+ Year",
+    type: "Tools",
+  },
+  {
+    id: 2,
+    title: "Github",
+    image: <SiGithub />,
+    exprince: "1+ Year",
+
+    type: "Tools",
+  },
+  {
+    id: 3,
+    title: "Versal",
+    image: <SiGit />,
+    exprince: "1+ Year",
+
+    type: "Tools",
+  },
+  {
+    id: 4,
+    title: "Figma",
+    image: <SiFigma />,
+    exprince: "1.5+ Year",
+
+    type: "Tools",
+  },
+  {
+    id: 5,
+    title: "Chatgpt",
+    image: <SiGit />,
+    exprince: "3+ Year",
+    type: "Tools",
+  },
+  {
+    id: 6,
+    title: "vs code",
+    exprince: "3+ Year",
+    image: <SiGit />,
+    type: "Tools",
+  },
+  {
+    id: 7,
+    title: "HTML",
+    image: <SiHtml5 />,
+    exprince: "3+ Year",
+
+    type: "Frontend",
+  },
+  {
+    id: 8,
+    title: "CSS",
+    image: <SiGit />,
+    exprince: "3+ Year",
+
+    type: "Frontend",
+  },
+  {
+    id: 9,
+    title: "Javascript",
+    image: <SiGit />,
+    exprince: "2+ Year",
+    type: "All",
+  },
+];
+
+const cetegry = ["All" , "Frontend" , "Backend" , "Tools"]
 
 function Skills() {
   useEffect(() => {
@@ -82,7 +157,7 @@ function Skills() {
           <div className="w-1 bg-accent h-[432px] lg:h-[632px] relative"></div>
           <div className="size-4 rounded-full bg-accent top-28 absolute"></div>
           <div className="absolute top-40 lg:top-50 left-1/2 flex items-center gap-4">
-            <div className="w-24 sm:w-57 lg:w-65 h-1 bg-accent"></div>
+            <div className="w-20 sm:w-57 lg:w-65 h-1 bg-accent"></div>
             <h2
               data-aos="fade-left"
               data-aos-offset="70"
@@ -99,10 +174,10 @@ function Skills() {
             >
               CSS 3
             </h2>
-            <div className="w-24 sm:w-57 lg:w-65 h-1 bg-accent"></div>
+            <div className="w-20 sm:w-57 lg:w-65 h-1 bg-accent"></div>
           </div>
           <div className="absolute top-80 lg:top-110 left-1/2 flex items-center gap-4">
-            <div className="w-24 sm:w-57 lg:w-65 h-1 bg-accent"></div>
+            <div className="w-20 sm:w-57 lg:w-65 h-1 bg-accent"></div>
             <h2
               data-aos="fade-left"
               data-aos-offset="70"
@@ -120,11 +195,11 @@ function Skills() {
             >
               React.js
             </h2>
-            <div className="w-24 sm:w-57 lg:w-70 h-1 bg-accent"></div>
+            <div className="w-20 sm:w-57 lg:w-70 h-1 bg-accent"></div>
           </div>
 
           <div className="absolute top-120 lg:top-160 left-1/2 flex items-center gap-4">
-            <div className="w-24 sm:w-57 lg:w-65 h-1 bg-accent"></div>
+            <div className="w-20 sm:w-57 lg:w-65 h-1 bg-accent"></div>
             <h2
               data-aos="fade-left"
               data-aos-offset="70"
@@ -140,6 +215,37 @@ function Skills() {
           >
             Progress..
           </h1>
+        </div>
+      </div>
+      <div className="w-full">
+        <div>
+          {cetegry.map((cetegry , key)=>{
+            return(
+              <div key={key} className="text-primary font-bold">{cetegry}</div>
+            )
+          })}
+        </div>
+        <div className="flex flex-row gap-16">
+          {skills.map((skill, key) => {
+            return (
+              <div
+                key={key}
+                className="flex flex-row card items-start rounded-2xl size"
+              >
+                <div>
+                  <img
+                    className="size-15"
+                    src={skill.image}
+                    alt="image not found"
+                  />
+                </div>
+                <div className="items-start">
+                  <h1 className="text-primary font-bold">{skill.title}</h1>
+                  <h3 className="text-primary pl-1 w-max">{skill.exprince}</h3>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

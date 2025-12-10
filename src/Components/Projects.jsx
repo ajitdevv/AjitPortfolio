@@ -3,7 +3,7 @@ import project2 from "./moviewebsite.png";
 import project3 from "./portfoliowebsite.png";
 import { ArrowRight } from "lucide-react";
 import { SiGit } from "react-icons/si";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 const projects = [
@@ -33,7 +33,7 @@ const projects = [
     Description:
       "lorem ldjshadl alsdhjf ahjaks asdfh  kad  ldiuwe8  lakhd  aksdg ",
     image: project3,
-    tags: ["HTML, ", "Css , ", "JavaScript"],
+    tags: ["React.js, ", "tailwind CSS, ", "Vercel"],
     demoUrl: "https://ajitdevv.github.io/music-website/",
     gitUrl: "https://ajitdevv.github.io/music-website/",
   },
@@ -53,9 +53,11 @@ function Project() {
       className="mt-15 w-full flex flex-col items-center justify-center "
     >
       <div className=" ">
-        <h1 
-              data-aos="fade-right"
-              data-aos-offset="150" className="text-primary-foreground bold text-5xl font-bold  flex justify-start  mb-6 ">
+        <h1
+          data-aos="fade-right"
+          data-aos-offset="150"
+          className="text-primary-foreground bold text-5xl font-bold  flex justify-start  mb-6 "
+        >
           Projects
         </h1>
       </div>
@@ -65,12 +67,11 @@ function Project() {
           const shortText = project.Description.substring(0, 20);
           return (
             <div
-            
               data-aos="fade-up"
               data-aos-offset="150"
               key={key}
               className="flex flex-col items-center max-sm:flex-col max-sm:w-100 justify-center p-3 rounded-2xl  bg-foreground w-120 h-80 overflow-hidden"
-              >
+            >
               <div className="overflow-hidden rounded-2xl ">
                 <img
                   className="w-100 h-70 hover:scale-105 rounded-2xl transition-transform duration-300"
@@ -79,9 +80,10 @@ function Project() {
                 />
               </div>
               <div className="flex flex-row justify-between items-start w-full">
-
                 <div className="flex flex-col justify-between items-start  [&>*]:text-primary">
-                  <h2 className="highlight-text highlight-text ml-5 text-xl">{project.tags }</h2>
+                  <h2 className="highlight-text highlight-text ml-5 text-xl">
+                    {project.tags}
+                  </h2>
                   <h3 className="text-lg ml-7">{project.title}</h3>
                   <p className=" ml-7 ">
                     {isExpanded ? project.Description : shortText + "..."}
@@ -96,7 +98,6 @@ function Project() {
                 <div className="mr-7">
                   <a href={project.demoUrl} target="_blank">
                     <ArrowRight className="w-6 h-5 my-3 text-primary rotate-[-45deg] hover:rotate-0 hover:scale-125 transition-transform duration-400" />
-
                   </a>
                   <a href={project.gitUrl} target="_blank">
                     <SiGit className="w-6 h-5 text-primary hover:scale-125 transition-transform duration-300" />

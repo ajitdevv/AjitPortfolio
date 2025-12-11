@@ -255,7 +255,7 @@ function Skills() {
           data-aos="fade-down"
           data-aos-offset="150"
           data-aos-duration="1000"
-          className="flex gap-4 max-sm:gap-1 items-center justify-center mt-5 mb-7"
+          className="flex gap-4 max-sm:gap-0 items-center justify-center mt-5 mb-7"
         >
           {cetegry.map((cetegry, key) => {
             return (

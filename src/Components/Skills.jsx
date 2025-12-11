@@ -297,29 +297,29 @@ function Skills() {
         </div>
       </div>
       <div className="inear border-l-2 border-r-2 border-black w-[70%] max-sm:w-full ">
-        <div className="flex group flex-row gap-10">
-          <SiHtml5 size={70} className="icon" color="#E34F26" />
-          <SiReact size={70} className="icon" color="#61DAFB" />
-          <SiCss3 size={70} className="icon" color="#1572B6" />
-          <SiTailwindcss size={70} className="icon" color="#38B2AC" />
-          <SiJavascript size={70} className="icon" color="#F7DF1E" />
-          <SiHtml5 size={70} className="icon" color="#E34F26" />
-          <SiReact size={70} className="icon" color="#61DAFB" />
-          <SiCss3 size={70} className="icon" color="#1572B6" />
-          <SiTailwindcss size={70} className="icon" color="#38B2AC" />
-          <SiJavascript size={70} className="icon" color="#F7DF1E" />
+        <div className="flex group flex-row gap-10 *:size-15 *:max-sm:size-10 ">
+          <SiHtml5 className="icon" color="#E34F26" />
+          <SiReact className="icon" color="#61DAFB" />
+          <SiCss3 className="icon" color="#1572B6" />
+          <SiTailwindcss className="icon" color="#38B2AC" />
+          <SiJavascript className="icon" color="#F7DF1E" />
+          <SiHtml5 className="icon" color="#E34F26" />
+          <SiReact className="icon" color="#61DAFB" />
+          <SiCss3 className="icon" color="#1572B6" />
+          <SiTailwindcss className="icon" color="#38B2AC" />
+          <SiJavascript className="icon" color="#F7DF1E" />
         </div>
-        <div aria-hidden className="flex group flex-row gap-10">
-          <SiHtml5 size={70} className="icon" color="#E34F26" />
-          <SiReact size={70} className="icon" color="#61DAFB" />
-          <SiCss3 size={70} className="icon" color="#1572B6" />
-          <SiTailwindcss size={70} className="icon" color="#38B2AC" />
-          <SiJavascript size={70} className="icon" color="#F7DF1E" />
-          <SiHtml5 size={70} className="icon" color="#E34F26" />
-          <SiReact size={70} className="icon" color="#61DAFB" />
-          <SiCss3 size={70} className="icon" color="#1572B6" />
-          <SiJavascript size={70} className="icon" color="#F7DF1E" />
-          <SiTailwindcss size={70} className="icon" color="#38B2AC" />
+        <div aria-hidden className="flex group flex-row gap-10 *:size-15 *:max-sm:size-10 ">
+          <SiHtml5 className="icon" color="#E34F26" />
+          <SiReact className="icon" color="#61DAFB" />
+          <SiCss3 className="icon" color="#1572B6" />
+          <SiTailwindcss className="icon" color="#38B2AC" />
+          <SiJavascript className="icon" color="#F7DF1E" />
+          <SiHtml5 className="icon" color="#E34F26" />
+          <SiReact className="icon" color="#61DAFB" />
+          <SiCss3 className="icon" color="#1572B6" />
+          <SiJavascript className="icon" color="#F7DF1E" />
+          <SiTailwindcss className="icon" color="#38B2AC" />
         </div>
       </div>
     </section>

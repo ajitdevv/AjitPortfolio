@@ -20,8 +20,8 @@ import {
   SiVscodium,
 } from "react-icons/si";
 import { MdPsychology, MdPhoneIphone, MdDesignServices } from "react-icons/md";
-import { RiPlugLine  } from "react-icons/ri";
-import { VscVscode, VscDebugAlt  } from "react-icons/vsc";
+import { RiPlugLine } from "react-icons/ri";
+import { VscVscode, VscDebugAlt } from "react-icons/vsc";
 
 const skills = [
   // ================================
@@ -171,12 +171,12 @@ const skills = [
   {
     id: 19,
     title: "API Handling",
-    Icon: RiPlugLine ,
+    Icon: RiPlugLine,
     color: "#264653",
     exprince: "1+ Year",
     type: "Extra",
   },
-  
+
   {
     id: 20,
     title: "Responsive Design",
@@ -196,13 +196,12 @@ const skills = [
   {
     id: 22,
     title: "Debugging",
-    Icon: VscDebugAlt ,
+    Icon: VscDebugAlt,
     color: "#E63946",
     exprince: "Strong",
     type: "Extra",
   },
 ];
-
 
 const cetegry = ["All", "Frontend", "Backend", "Tools", "Extra"];
 
@@ -248,11 +247,16 @@ function Skills() {
          
         `}
       </style>
-     
+
       <hr />
 
       <div className="w-full place-items-center flex flex-col mt-10">
-        <div className="flex gap-4 max-sm:gap-1 items-center justify-center mt-5 mb-7">
+        <div
+          data-aos="fade-down"
+          data-aos-offset="150"
+          data-aos-duration="1000"
+          className="flex gap-4 max-sm:gap-1 items-center justify-center mt-5 mb-7"
+        >
           {cetegry.map((cetegry, key) => {
             return (
               <div
@@ -271,7 +275,9 @@ function Skills() {
             );
           })}
         </div>
-        <div className="grid grid-cols-4 max-sm:grid-cols-2 place-items-center justify-center items-center gap-x-15 gap-8">
+        <div  data-aos="fade-up"
+          data-aos-offset="150"
+          data-aos-duration="1000" className="grid grid-cols-4 max-sm:grid-cols-2 place-items-center justify-center items-center gap-x-15 gap-8">
           {filteredSkills.map((skill, key) => {
             return (
               <div

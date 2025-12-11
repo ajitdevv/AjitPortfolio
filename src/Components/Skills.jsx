@@ -255,7 +255,7 @@ function Skills() {
           data-aos="fade-down"
           data-aos-offset="150"
           data-aos-duration="1000"
-          className="flex gap-4 max-sm:gap-0 items-center justify-center mt-5 mb-7"
+          className="flex gap-4 max-sm:gap-0 max-w-sm:[90%] items-center justify-center mt-5 mb-7"
         >
           {cetegry.map((cetegry, key) => {
             return (
@@ -277,7 +277,7 @@ function Skills() {
         </div>
         <div  data-aos="fade-up"
           data-aos-offset="150"
-          data-aos-duration="1000" className="grid grid-cols-4 max-sm:grid-cols-2 place-items-center justify-center items-center gap-x-15 gap-8">
+          data-aos-duration="1000" className="grid grid-cols-4 max-sm:grid-cols-2 place-items-center justify-center items-center gap-x-15 gap-8 max-sm:gap-4">
           {filteredSkills.map((skill, key) => {
             return (
               <div

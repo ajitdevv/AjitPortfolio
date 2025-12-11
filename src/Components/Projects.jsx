@@ -70,7 +70,7 @@ function Project() {
               data-aos="fade-up"
               data-aos-offset="150"
               key={key}
-              className="flex flex-col items-center max-sm:flex-col max-sm:w-100 justify-center p-3 rounded-2xl  bg-foreground w-120 h-80 overflow-hidden"
+              className="flex flex-col items-center max-sm:flex-col max-sm:w-80 justify-center p-3 rounded-2xl  bg-foreground w-120 h-80 overflow-hidden"
             >
               <div className="overflow-hidden rounded-2xl ">
                 <img
@@ -80,13 +80,13 @@ function Project() {
                 />
               </div>
               <div className="flex flex-row justify-between items-start w-full">
-                <div className="flex flex-col justify-between items-start  [&>*]:text-primary">
-                  <h2 className="highlight-text highlight-text ml-5 text-xl">
+                <div className="flex flex-col justify- items-start  [&>*]:text-primary">
+                  <h2 className="highlight-tex ml-5 text-xl">
                     {project.tags}
                   </h2>
-                  <h3 className="text-lg ml-7">{project.title}</h3>
-                  <p className=" ml-7 ">
-                    {isExpanded ? project.Description : shortText + "..."}
+                  <h3 className="text-lg ml-5">{project.title}</h3>
+                  <p className=" ml-5 ">
+                    {isExpanded ? project.Description : shortText + "..."} "
                     <button
                       onClick={() => toggleExpand(project.id)}
                       className="primary-button ml-7 hover:underline"

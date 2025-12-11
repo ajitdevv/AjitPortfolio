@@ -265,8 +265,8 @@ function Skills() {
                 className={`arrow text-primary font-bold hover:cursor-pointer 
   ${
     selectedCetegry === cetegry
-      ? "bg-card m-2 px-2 rounded-2xl py-1"
-      : "m-2 px-2 py-1"
+      ? "bg-card m-1 px-2 rounded-2xl py-1"
+      : "m-1 px-2 py-1"
   }
 `}
               >

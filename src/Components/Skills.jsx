@@ -296,7 +296,7 @@ function Skills() {
           })}
         </div>
       </div>
-      <div className="inear border-l-2 border-r-2 border-black w-[70%] max-sm:w-full ">
+      <div className="inear border-l-2 border-r-2 no-scrollbar border-black w-[70%] max-sm:w-full ">
         <div className="flex group flex-row gap-10 *:size-15 *:max-sm:size-10 ">
           <SiHtml5 className="icon" color="#E34F26" />
           <SiReact className="icon" color="#61DAFB" />

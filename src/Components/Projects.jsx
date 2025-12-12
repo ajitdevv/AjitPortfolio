@@ -1,6 +1,6 @@
-import project1 from "./musicwebsite.png";
-import project2 from "./moviewebsite.png";
-import project3 from "./portfoliowebsite.png";
+import project1 from "../assets/image/musicwebsite.png";
+import project2 from "../assets/image/moviewebsite.png";
+import project3 from "../assets/image/portfoliowebsite.png";
 import { ArrowRight } from "lucide-react";
 import { SiGit } from "react-icons/si";
 import { useState, useEffect } from "react";
@@ -80,7 +80,7 @@ function Project() {
                 />
               </div>
               <div className="flex flex-row justify-between items-start w-full">
-                <div className="flex flex-col justify- items-start  [&>*]:text-primary">
+                <div className="flex flex-col justify- items-start  *:text-primary">
                   <h2 className="highlight-tex ml-5 text-xl">
                     {project.tags}
                   </h2>
@@ -97,7 +97,7 @@ function Project() {
                 </div>
                 <div className="mr-7">
                   <a href={project.demoUrl} target="_blank">
-                    <ArrowRight className="w-6 h-5 my-3 text-primary rotate-[-45deg] hover:rotate-0 hover:scale-125 transition-transform duration-400" />
+                    <ArrowRight className="w-6 h-5 my-3 text-primary -rotate-45deg hover:rotate-0 hover:scale-125 transition-transform duration-400" />
                   </a>
                   <a href={project.gitUrl} target="_blank">
                     <SiGit className="w-6 h-5 text-primary hover:scale-125 transition-transform duration-300" />

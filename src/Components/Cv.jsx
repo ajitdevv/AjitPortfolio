@@ -1,7 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import Aos from "aos";
 import { useEffect, useState } from "react";
-import resume from "./resume.pdf";
+import resume from "../assets/resume/resume.pdf";
+
 function Cv() {
   const [showPopup, setShowPopup] = useState(false);
   useEffect(() => {

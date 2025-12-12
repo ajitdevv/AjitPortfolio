@@ -24,7 +24,7 @@ function Footer() {
             <p className="text-sm mt-3 text-gray-400 max-w-xs">
               Frontend developer – creating modern and creative web experiences.
             </p>
-            <div className="flex gap-5 mt-4">
+            <div className="flex justify-center items-center gap-5 mt-4">
               <a href="https://www.instagram.com/ajitdevv/" target="_blank">
                 <BsInstagram className="w-6 h-6 hover:scale-125 transition-transform" />
               </a>

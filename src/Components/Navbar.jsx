@@ -1,5 +1,5 @@
-import logo from "./reminihi.png";
-import logo2 from "./remini2.png";
+import logo from "../assets/image/reminihi.png";
+import logo2 from "../assets/image/remini2.png";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import AOS from "aos";
@@ -31,7 +31,7 @@ function Navbar() {
   }, []);
   return (
     <nav>
-      <div className="w-full bg-foreground fixed z-100 hidden justify-around items-center p-5 mb-4 sm:flex">
+      <div className="w-full bg-foreground/85 fixed z-100 hidden justify-around items-center p-5 mb-4 sm:flex">
         <img
           data-aos="fade-right"
           data-aos-offset="150"
@@ -60,7 +60,7 @@ function Navbar() {
         data-aos="fade-down"
         data-aos-offset="150"
         data-aos-duration="1000"
-        className="w-full fixed top-0 left-0 flex justify-between px-7 items-center py-4 bg-background z-50 sm:hidden"
+        className="w-full fixed top-0 left-0 flex justify-between px-7 items-center py-4 bg-background/85 z-50 sm:hidden"
       >
         <img
           // className="w-7 h-8 mt-1.5"

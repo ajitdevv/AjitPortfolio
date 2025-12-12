@@ -7,6 +7,7 @@ import Skills from "../Components/Skills";
 import Project from "../Components/Projects";
 import Contact from "../Components/Contact";
 import Footer from "../Components/Footer";
+import Topbutton from "../Components/Topbutton";
 
 function home() {
   return (
@@ -20,6 +21,7 @@ function home() {
       <Navbar />
       {/* Main content */}
       <main>
+        <Topbutton/>
         <Herosection />
         <About />
         <Skills />

@@ -63,8 +63,9 @@ function Navbar() {
         className="w-full fixed top-0 left-0 flex justify-between px-7 items-center py-4 bg-background z-50 sm:hidden"
       >
         <img
-          className="w-7 h-8 mt-1.5"
-          src={isDark ? logo : logo2}
+          // className="w-7 h-8 mt-1.5"
+           className={isDark ? "w-7 h-8 mt-1.5" : "w-7 h-8 mt-1.5 "}
+          src={isDark ? logo : logo2 }
           alt="logo not found"
         />
         <button

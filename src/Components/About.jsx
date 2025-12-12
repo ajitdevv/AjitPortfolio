@@ -60,14 +60,14 @@ function About() {
         </h3>
         <div className="mt-10 flex flex-row justify-around max-sm:gap-4 ">
           <a
-            className="cosmic-button w-[45%] justify-center flex items-center text-[15px]"
+            className="cosmic-button w-[45%] justify-center flex max-sm:text-xs items-center text-[15px]"
             href="#contact"
             data-aos="fade-left"
             data-aos-offset="100"
           >
             <button>Contact me</button>
           </a>
-          <Link to="/about/cv" className="cosmic-button w-[45%] justify-center items-center flex text-[15px]" data-aos="fade-right" data-aos-offset="100">
+          <Link to="/about/cv" className="cosmic-button max-sm:text-xs w-[45%] justify-center items-center flex text-[15px]" data-aos="fade-right" data-aos-offset="100">
             <button>Resume</button>
           </Link>
           

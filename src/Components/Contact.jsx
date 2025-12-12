@@ -37,7 +37,7 @@ function Contact() {
             >
               <div
                 data-aos="fade-left"
-                data-aos-offset="150"   
+                data-aos-offset="150"
                 className="flex flex-row w-full jestify-srart font-bold text-2xl text-primary/70"
               >
                 <h1>Say hi..</h1>
@@ -77,7 +77,7 @@ function Contact() {
                   id="Gmail"
                   placeholder="example1234@gamil.com"
                   required
-                  pattern="^[a-zA-Z0-9._%+-]+@gmail\.com$"
+                  pattern="^[a-zA-Z0-9](?:[a-zA-Z0-9._%+-]{0,62}[a-zA-Z0-9])?@gmail\.com$"
                   title="Please enter a valid Gmail address (example@gmail.com)"
                   className=" rounded-2xl w-[91%] bg-card m-5 p-3"
                 />
@@ -89,7 +89,7 @@ function Contact() {
                   name="contact"
                   type="contact"
                   id="contact"
-                  placeholder="Enter mobile number"
+                  placeholder="Enter mobile number (Optional)"
                   pattern="^[6-9]\d{9}$"
                   title="Please enter a valid 10-digit Indian mobile number"
                   className=" rounded-2xl w-[91%] bg-card m-5 p-3"
@@ -103,7 +103,7 @@ function Contact() {
                   type="text"
                   id="Message"
                   placeholder="Type any message..."
-                  className=" rounded-2xl w-[91%] bg-card m-5 p-3 h-[80px] "
+                  className=" rounded-2xl w-[91%] bg-card m-5 p-3 h-20 "
                 />
               </div>
               <div>
@@ -118,102 +118,113 @@ function Contact() {
               </div>
             </form>
           </div>
-          <div
-            /* socal midea container*/ className="w-[35%] max-sm:w-[90%] max-sm:justify-center  flex flex-col gap-2"
-          >
+          <div className="w-[35%] max-sm:w-[90%] max-sm:justify-center flex flex-col gap-2">
+            {/* Instagram */}
             <a
               href="https://www.instagram.com/ajitdevv/"
               target="_blank"
               data-aos="fade-up"
               data-aos-offset="150"
             >
-              <div className="flex flex-row justify-between bg-foreground py-[20px] rounded-2xl hover:scale-110 transition-transform duration-300">
+              <div className="flex flex-row justify-between bg-foreground py-5 rounded-2xl hover:scale-110 transition-transform duration-300">
                 <h1 className="text-primary px-6 flex gap-2">
-                  <BsInstagram className="text-primary size-8" />
+                  <BsInstagram className="size-8 text-pink-500" />
                   instagram.com/ajitdevv/
                 </h1>
                 <ArrowRight className="text-primary" />
               </div>
             </a>
+
+            {/* GitHub */}
             <a
               href="https://github.com/ajitdevv"
               target="_blank"
               data-aos="fade-up"
               data-aos-offset="150"
             >
-              <div className="flex flex-row justify-between bg-foreground py-[20px] rounded-2xl hover:scale-110 transition-transform duration-300">
-                <h1 className="text-primary px-6  flex gap-2">
-                  <BsGithub className="text-primary size-8" />
+              <div className="flex flex-row justify-between bg-foreground py-5 rounded-2xl hover:scale-110 transition-transform duration-300">
+                <h1 className="text-primary px-6 flex gap-2">
+                  <BsGithub className="size-8 text-black dark:text-white" />
                   github.com/ajitdevv
                 </h1>
                 <ArrowRight className="text-primary" />
               </div>
             </a>
+
+            {/* LinkedIn */}
             <a
               href="https://www.linkedin.com/in/ajeet-dev-947287330/"
               target="_blank"
               data-aos="fade-up"
               data-aos-offset="150"
             >
-              <div className="flex flex-row justify-between bg-foreground py-[20px] rounded-2xl hover:scale-110 transition-transform duration-300">
-                <h1 className="text-primary px-6  flex gap-2">
-                  <BsLinkedin className="text-primary size-8" />
+              <div className="flex flex-row justify-between bg-foreground py-5 rounded-2xl hover:scale-110 transition-transform duration-300">
+                <h1 className="text-primary px-6 flex gap-2">
+                  <BsLinkedin className="size-8 text-blue-600" />
                   linkedin.com
                 </h1>
                 <ArrowRight className="text-primary" />
               </div>
             </a>
+
+            {/* Gmail */}
             <a
               href="mailto:ajitdev014@gmail.com"
               target="_blank"
               data-aos="fade-up"
               data-aos-offset="150"
             >
-              <div className="flex flex-row justify-between bg-foreground py-[20px] rounded-2xl hover:scale-110 transition-transform duration-300">
-                <h1 className="text-primary px-6  flex gap-2">
-                  <BsMailbox className="text-primary size-8" />
+              <div className="flex flex-row justify-between bg-foreground py-5 rounded-2xl hover:scale-110 transition-transform duration-300">
+                <h1 className="text-primary px-6 flex gap-2">
+                  <BsMailbox className="size-8 text-red-500" />
                   ajitdev014@gmail.com
                 </h1>
                 <ArrowRight className="text-primary" />
               </div>
             </a>
+
+            {/* Twitter / X */}
             <a
               href="https://x.com/ajitdevv"
               target="_blank"
               data-aos="fade-up"
               data-aos-offset="150"
             >
-              <div className="flex flex-row justify-between bg-foreground py-[20px] rounded-2xl hover:scale-110 transition-transform duration-300 ">
-                <h1 className="text-primary px-6  flex gap-2">
-                  <BsTwitter className="text-primary size-8" />
+              <div className="flex flex-row justify-between bg-foreground py-5 rounded-2xl hover:scale-110 transition-transform duration-300">
+                <h1 className="text-primary px-6 flex gap-2">
+                  <BsTwitter className="size-8 text-sky-500" />
                   x.com/ajitdevv
                 </h1>
                 <ArrowRight className="text-primary" />
               </div>
             </a>
+
+            {/* WhatsApp */}
             <a
               href="https://wa.me/918058339867"
               target="_blank"
               data-aos="fade-up"
               data-aos-offset="150"
             >
-              <div className="flex flex-row justify-between bg-foreground py-[20px] rounded-2xl hover:scale-110 transition-transform duration-300 ">
-                <h1 className="text-primary px-6  flex gap-2">
-                  <BsWhatsapp className="text-primary size-8" />
+              <div className="flex flex-row justify-between bg-foreground py-5 rounded-2xl hover:scale-110 transition-transform duration-300">
+                <h1 className="text-primary px-6 flex gap-2">
+                  <BsWhatsapp className="size-8 text-green-500" />
                   Contact on whatsapp
                 </h1>
                 <ArrowRight className="text-primary" />
               </div>
             </a>
+
+            {/* Phone */}
             <a
               href="tel:+918058339867"
               target="_blank"
               data-aos="fade-up"
               data-aos-offset="150"
             >
-              <div className="flex flex-row justify-between bg-foreground py-[20px] rounded-2xl hover:scale-110 transition-transform duration-300 ">
-                <h1 className="text-primary px-6  flex gap-2">
-                  <BsTelephone className="text-primary size-8" />
+              <div className="flex flex-row justify-between bg-foreground py-5 rounded-2xl hover:scale-110 transition-transform duration-300">
+                <h1 className="text-primary px-6 flex gap-2">
+                  <BsTelephone className="size-8 text-indigo-500" />
                   8058339867
                 </h1>
                 <ArrowRight className="text-primary" />

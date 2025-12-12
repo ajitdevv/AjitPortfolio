@@ -282,7 +282,7 @@ function Skills() {
             return (
               <div
                 key={key}
-                className="flex flex-row w-38 gap-2 card items-start rounded-2xl hover:scale-115 transition-transform transition-duration:300px "
+                className="flex flex-row w-38 gap-2 card items-start rounded-2xl hover:scale-115 transition-transform transition-duration:300px> "
               >
                 <div>
                   <skill.Icon size={40} color={skill.color} />

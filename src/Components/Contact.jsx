@@ -33,16 +33,16 @@ function Contact() {
             <form
               action="https://formspree.io/f/mzzaewzd"
               method="POST"
-              className="flex flex-col rounded-2xl w-[90%] bg-foreground p-3 max-sm:pb-9"
+              className="flex flex-col shadow-xl rounded-2xl w-[90%] bg-foreground p-3 max-sm:pb-9"
             >
               <div
                 data-aos="fade-left"
                 data-aos-offset="150"
-                className="flex flex-row w-full jestify-srart font-bold text-2xl text-primary/70"
+                className="flex flex-row  w-full justify-start font-bold text-2xl text-primary/70"
               >
                 <h1>Say hi..</h1>
               </div>
-              <div className="flex flex-row w-full jestify-srart ">
+              <div className="flex flex-row w-full justify-start ">
                 <input
                   data-aos="fade-right"
                   data-aos-offset="150"

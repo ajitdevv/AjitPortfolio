@@ -82,11 +82,11 @@ function Project() {
               data-aos="fade-up"
               data-aos-offset="150"
               key={key}
-              className="flex flex-col items-center max-sm:flex-col max-sm:w-80 justify-center p-3 rounded-2xl  bg-foreground w-120 h-80 overflow-hidden"
+              className="flex flex-col items-center shadow-sm  max-sm:flex-col max-sm:w-80  justify-center p-3 rounded-2xl  bg-foreground w-120 h-80 overflow-hidden"
             >
               <div className="overflow-hidden rounded-2xl ">
                 <img
-                  className="w-100 h-70 hover:scale-105 rounded-2xl transition-transform duration-300"
+                  className="w-100 h-70 max-sm:h-40 hover:scale-105 rounded-2xl transition-transform duration-300"
                   src={project.image}
                   alt=" Project image not found"
                 />

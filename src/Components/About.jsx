@@ -34,7 +34,7 @@ function About() {
             className="text-primary-foreground "
             style={{ letterSpacing: "0.01rem" }}
           >
-            <span> Ajit Dev </span>
+            <span> Ajeet Bairwa </span>
           </a>
           , a passionate Web Developer blending code and creativity to build
           modern, responsive, and impactful digital experiences."

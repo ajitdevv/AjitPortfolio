@@ -20,7 +20,7 @@ function Footer() {
       <footer className="w-full bg-foreground text-primary py-10 mt-0">
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-10">
           <div>
-            <h1 className="text-3xl font-bold text-primary">Ajit Dev</h1>
+            <h1 className="text-3xl font-bold text-primary">Ajeet Bairwa</h1>
             <p className="text-sm mt-3 text-gray-400 max-w-xs">
               Frontend developer – creating modern and creative web experiences.
             </p>

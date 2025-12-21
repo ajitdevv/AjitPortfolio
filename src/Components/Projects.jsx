@@ -1,6 +1,7 @@
 import project1 from "../assets/image/musicwebsite.png";
 import project2 from "../assets/image/moviewebsite.png";
 import project3 from "../assets/image/portfoliowebsite.png";
+import project4 from "../assets/image/Landingpage.png";
 import { ArrowRight } from "lucide-react";
 import { SiGit } from "react-icons/si";
 import { useState, useEffect } from "react";
@@ -22,7 +23,7 @@ const projects = [
     title: "Marketing Landing Page",
     Description:
       "Designed and developed a modern, conversion-focused marketing landing page with a clean UI and responsive layout. Built reusable sections such as hero, features, testimonials, and call-to-action using React.js and Tailwind CSS. Optimized for performance and deployed to production on Vercel.",
-    image: "project4",
+    image: project4,
     tags: ["React.js ", "Tailwind CSS ", "Responsive UI ", "Vercel"],
     demoUrl: "https://morden-landing-page-psi.vercel.app/",
     gitUrl: "https://github.com/ajitdevv/MordenLandingPage",

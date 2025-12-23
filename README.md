@@ -1,6 +1,6 @@
 📘 Ajit’s Portfolio Website
 
-🔗 Live Demo
+🔗 Live Link
 
 👉 https://ajit-portfolio-rust.vercel.app/
  (Deployed on Vercel)

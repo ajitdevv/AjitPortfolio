@@ -12,7 +12,10 @@ This is a personal developer portfolio website built with modern web technologie
 This portfolio helps recruiters and visitors quickly understand my work, skills, and contact information in a professional way. 
 Vercel
 
+
+
 🧠 Tech Stack
+
 
 React.js – Component-based UI development
 
@@ -27,11 +30,19 @@ Vercel – Deployment & hosting
 📦 Key Features
 
 ✔️ Fully Responsive Layout (mobile +tablet + desktop)
+
 ✔️ Smooth scroll-based animations using AOS
+
 ✔️ Clean and consistent icons using Lucide React / React Icons
+
 ✔️ About Section (Intro about me)
+
 ✔️ Skills Showcase
+
 ✔️ Projects / Work Examples
+
 ✔️ Contact Section
+
 ✔️ Clean UI & Smooth Design
+
 ✔️ Easy to Customize

@@ -214,16 +214,17 @@
         scroll-behavior: smooth;
     }
 
-    *{
+    * {
         scrollbar-width: thin;
         scrollbar-color: var(--primary-foreground) var(--background);
     }
-.no-scrollbar {
-  scrollbar-width: none !important; /* Firefox */
-}
 
-.no-scrollbar::-webkit-scrollbar {
-  display: none !important; /* Chrome, Edge */
-}
+    .no-scrollbar {
+        scrollbar-width: none !important;
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+        display: none !important;
+    }
 
 }

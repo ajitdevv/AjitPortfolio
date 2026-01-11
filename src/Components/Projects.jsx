@@ -2,6 +2,7 @@ import project1 from "../assets/image/musicwebsite.png";
 import project2 from "../assets/image/moviewebsite.png";
 import project3 from "../assets/image/portfoliowebsite.png";
 import project4 from "../assets/image/Landingpage.png";
+import project5 from "../assets/image/Myshop.png";
 import { ArrowRight } from "lucide-react";
 import { SiGit } from "react-icons/si";
 import { useState, useEffect } from "react";
@@ -10,14 +11,21 @@ import "aos/dist/aos.css";
 const projects = [
   {
     id: 1,
-    title: "Developer Portfolio",
+    title: "MyShop",
     Description:
-      "Architected and developed a modern, production-ready personal portfolio to showcase frontend projects and skills. Built with React.js and Tailwind CSS using a component-driven approach, featuring responsive layouts, dark/light theme support, smooth animations, and optimized performance. Deployed to Vercel with a focus on clean UI, accessibility, and fast load times.",
-    image: project3,
-    tags: ["React.js ", "Tailwind CSS ", "Responsive UI ", "Dark Mode ", "Vercel"],
-    demoUrl: "https://ajit-portfolio-rust.vercel.app/",
-    gitUrl: "https://github.com/ajitdevv/portfolio",
+      "MyShop is a modern and responsive React-based E-commerce web application built to demonstrate real-world frontend development skills. The project features dynamic routing, category-based product filtering through interactive home page images, centralized state management using Redux Toolkit, and complete cart and order functionality.",
+    image: project5,
+    tags: [
+      "React",
+      "Redux Toolkit",
+      "React Router",
+      "Tailwind CSS",
+      "Responsive UI",
+    ],
+    demoUrl: "https://myshopdev.vercel.app/",
+    gitUrl: "https://github.com/ajitdevv/my-shop",
   },
+
   {
     id: 2,
     title: "Marketing Landing Page",
@@ -47,6 +55,22 @@ const projects = [
     tags: ["HTML ", "CSS ", "JavaScript ", "Responsive UI "],
     demoUrl: "https://ajitdevv.github.io/music-website/",
     gitUrl: "https://github.com/ajitdevv/music-website",
+  },
+  {
+    id: 5,
+    title: "Developer Portfolio",
+    Description:
+      "Architected and developed a modern, production-ready personal portfolio to showcase frontend projects and skills. Built with React.js and Tailwind CSS using a component-driven approach, featuring responsive layouts, dark/light theme support, smooth animations, and optimized performance. Deployed to Vercel with a focus on clean UI, accessibility, and fast load times.",
+    image: project3,
+    tags: [
+      "React.js ",
+      "Tailwind CSS ",
+      "Responsive UI ",
+      "Dark Mode ",
+      "Vercel",
+    ],
+    demoUrl: "https://ajit-portfolio-rust.vercel.app/",
+    gitUrl: "https://github.com/ajitdevv/portfolio",
   },
 ];
 
@@ -87,7 +111,7 @@ function Project() {
               <div className="overflow-hidden rounded-2xl ">
                 <img
                   className="w-100 h-70 max-sm:h-40 hover:scale-105 rounded-2xl transition-transform duration-300"
-                  src={project.image}
+                  src={project.image ? project.image : null}
                   alt=" Project image not found"
                 />
               </div>

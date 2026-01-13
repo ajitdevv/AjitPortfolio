@@ -23,7 +23,7 @@ const projects = [
       "Responsive UI",
     ],
     demoUrl: "https://myshopdev.vercel.app/",
-    gitUrl: "https://github.com/ajitdevv/my-shop",
+    gitUrl: "https://github.com/ajitdevv/myshop",
   },
 
   {

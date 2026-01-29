@@ -28,6 +28,16 @@ const projects = [
 
   {
     id: 2,
+    title: "Movie Day",
+    Description:
+    "Built a responsive Movie Web App with a clean UI, allowing users to browse, search, and explore movie details. Integrated a real-time Movies API for dynamic content. Optimized for mobile and desktop, and deployed on Vercel for fast, reliable performance.",
+    image: project2,
+    tags: ["React.js ", "Tailwind CSS ", "API ", "Vercel"],
+    demoUrl: "https://movie-app-nine-opal.vercel.app/",
+    gitUrl: "https://github.com/ajitdevv/movie-app",
+  },
+  {
+    id: 3,
     title: "Marketing Landing Page",
     Description:
       "Designed and developed a modern, conversion-focused marketing landing page with a clean UI and responsive layout. Built reusable sections such as hero, features, testimonials, and call-to-action using React.js and Tailwind CSS. Optimized for performance and deployed to production on Vercel.",
@@ -35,16 +45,6 @@ const projects = [
     tags: ["React.js ", "Tailwind CSS ", "Responsive UI ", "Vercel"],
     demoUrl: "https://morden-landing-page-psi.vercel.app/",
     gitUrl: "https://github.com/ajitdevv/MordenLandingPage",
-  },
-  {
-    id: 3,
-    title: "Movie Day",
-    Description:
-      "Built a responsive Movie Web App with a clean UI, allowing users to browse, search, and explore movie details. Integrated a real-time Movies API for dynamic content. Optimized for mobile and desktop, and deployed on Vercel for fast, reliable performance.",
-    image: project2,
-    tags: ["React.js ", "Tailwind CSS ", "API ", "Vercel"],
-    demoUrl: "https://movie-app-nine-opal.vercel.app/",
-    gitUrl: "https://github.com/ajitdevv/movie-app",
   },
   {
     id: 4,
@@ -110,7 +110,7 @@ function Project() {
             >
               <div className="overflow-hidden rounded-2xl ">
                 <img
-                  className="w-100 h-70 max-sm:h-40 hover:scale-105 rounded-2xl transition-transform duration-300"
+                  className="w-100 h-47 max-sm:h-40 object-cover hover:scale-105 rounded-2xl transition-transform duration-300"
                   src={project.image ? project.image : null}
                   alt=" Project image not found"
                 />

@@ -50,13 +50,20 @@
     @keyframes fade-in {
         from {
             opacity: 0;
-            transfrom: translateY(20px);
+            transform: translateY(20px);
+            -webkit-transform: translateY(20px);
+            -moz-transform: translateY(20px);
+            -ms-transform: translateY(20px);
+            -o-transform: translateY(20px);
         }
 
         to {
             opacity: 1;
-            transfrom: translateY(0);
-
+            transform: translateY(0);
+            -webkit-transform: translateY(0);
+            -moz-transform: translateY(0);
+            -ms-transform: translateY(0);
+            -o-transform: translateY(0);
         }
     }
 
@@ -121,7 +128,6 @@
 
     * {
         @apply border-border;
-        @apply transition-colors duration-500 ease-in-out;
     }
 
     html {
@@ -129,11 +135,17 @@
     }
 
     body {
-        @apply bg-background text-foreground transition-colors duration-300;
+        background-color: var(--background);
+        color: var(--foreground);
+        transition: background-color 1s ease, color 1s ease;
         font-feature-settings: "rlig" 1, "calt" 1;
         -webkit-font-feature-settings: "rlig" 1, "calt" 1;
         -moz-font-feature-settings: "rlig" 1, "calt" 1;
-    }
+        -webkit-transition: background-color 1s ease, color 1s ease;
+        -moz-transition: background-color 1s ease, color 1s ease;
+        -ms-transition: background-color 1s ease, color 1s ease;
+        -o-transition: background-color 1s ease, color 1s ease;
+}
 }
 
 @layer utilities {

@@ -26,16 +26,16 @@ const projects = [
     gitUrl: "https://github.com/ajitdevv/myshop",
   },
 
-  // {
-  //   id: 2,
-  //   title: "Movie Day",
-  //   Description:
-  //   "Built a responsive Movie Web App with a clean UI, allowing users to browse, search, and explore movie details. Integrated a real-time Movies API for dynamic content. Optimized for mobile and desktop, and deployed on Vercel for fast, reliable performance.",
-  //   image: project2,
-  //   tags: ["React.js ", "Tailwind CSS ", "API ", "Vercel"],
-  //   demoUrl: "https://movie-app-nine-opal.vercel.app/",
-  //   gitUrl: "https://github.com/ajitdevv/movie-app",
-  // },
+  {
+    id: 2,
+    title: "Movie Day",
+    Description:
+    "Built a responsive Movie Web App with a clean UI, allowing users to browse, search, and explore movie details. Integrated a real-time Movies API for dynamic content. Optimized for mobile and desktop, and deployed on Vercel for fast, reliable performance.",
+    image: project2,
+    tags: ["React.js ", "Tailwind CSS ", "API ", "Vercel"],
+    demoUrl: "https://movie-app-nine-opal.vercel.app/",
+    gitUrl: "https://github.com/ajitdevv/movie-app",
+  },
   {
     id: 3,
     title: "Marketing Landing Page",

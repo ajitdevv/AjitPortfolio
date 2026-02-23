@@ -71,14 +71,7 @@ function About() {
             <button>Resume</button>
           </Link>
           
-          {/* <a
-            className="cosmic-button w-[45%] justify-center flex items-center text-lg"
-            href="/about/cv"
-            data-aos="fade-right"
-            data-aos-offset="100"
-          >
-            <button>Resume</button>
-          </a> */}
+
         </div>
       </div>
       <div data-aos="fade-left" className="w-[30%] items-center justify-center flex max-sm:w-[70%]">

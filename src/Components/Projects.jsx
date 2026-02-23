@@ -3,6 +3,7 @@ import project2 from "../assets/image/moviewebsite.png";
 import project3 from "../assets/image/portfoliowebsite.png";
 import project4 from "../assets/image/Landingpage.png";
 import project5 from "../assets/image/Myshop.png";
+import project6 from "../assets/image/homepageblogWebApp.png";
 import { ArrowRight } from "lucide-react";
 import { SiGit } from "react-icons/si";
 import { useState, useEffect } from "react";
@@ -24,6 +25,24 @@ const projects = [
     ],
     demoUrl: "https://myshopdev.vercel.app/",
     gitUrl: "https://github.com/ajitdevv/myshop",
+  },
+  {
+    id: 6,
+    title: "Blog WebApp",
+    Description:
+      "A production-ready Blog Application built using Next.js (App Router) with Server-Side Rendering (SSR). The platform allows users to create, edit, and manage blogs through a structured dashboard with full CRUD functionality. It includes rich text formatting (headings, lists, images, links, bold/italic styling), dynamic routing for blog detail pages, and proper SEO implementation using metadata optimization. The application follows clean UI principles with TailwindCSS and is deployed for live access.",
+    image: project6,
+    tags: [
+      "Next.js",
+      "React",
+      "API Route Handlers",
+      "Rich Text Editor Integration",
+      "Tailwind CSS",
+      "Responsive UI",
+      "Vercel Deployment",
+    ],
+    demoUrl: "https://blog-webapp-mu-eight.vercel.app/",
+    gitUrl: "https://github.com/ajitdevv/blog-webapp",
   },
 
   {

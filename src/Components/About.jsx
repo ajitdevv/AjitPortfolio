@@ -84,7 +84,7 @@ function About() {
       <div data-aos="fade-left" className="w-[30%] items-center justify-center flex max-sm:w-[70%]">
         <img
           src={logo}
-          className="h-[70% rounded-4xl shadow-xl object-cover"
+          className="h-[70% rounded-4xl -xl object-cover"
         />
       </div>
     </section>

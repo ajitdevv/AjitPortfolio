@@ -4,7 +4,6 @@ import { ArrowRightSquareIcon, BookAudioIcon, GithubIcon } from "lucide-react";
 const ProjectDetile = () => {
   let { id } = useParams();
   let Project = projects.find((e) => e.id.toString() === id.toString());
-  console.log(Project.featured);
   if (!Project) {
     return (
       <h1 className="flex justify-center items-center text-3xl">

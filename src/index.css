@@ -191,7 +191,7 @@
     }
 
     .cosmic-button {
-        @apply px-2 md:px-4 py-2 rounded-full bg-primary hover:bg-primary/80 text-foreground font-medium shadowhover:shadow-(--shadow) hover:scale-97;
+        @apply px-2 md:px-4 py-2 rounded-full bg-primary hover:bg-primary/80 text-foreground font-medium hover:shadow-md hover:scale-97;
     }
 
     .primary-button {

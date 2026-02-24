@@ -30,7 +30,7 @@ function Herosection() {
           data-aos="fade-up"
           data-aos-offset="150"
           data-aos-duration="1000"
-          className="cosmic-button text-lg mt-10"
+          className="cosmic-button text-lg mt-10 transition-all  duration-300 "
         >
           See my work
         </button>

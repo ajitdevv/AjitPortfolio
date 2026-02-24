@@ -13,7 +13,7 @@ const ProjectDetile = () => {
     );
   }
   return (
-    <div className="text-black w-full flex flex-col justify-center items-center">
+    <div className="text-primary w-full flex flex-col justify-center items-center">
       <div className="w-full relative bg-linear-to-r max-h-screen from-primary-foreground/20 to-primary-foregroun/50">
         <div className="w-full h-60 md:h-80 flex justify-center items-center">
           <img
@@ -37,13 +37,13 @@ const ProjectDetile = () => {
         </div>
       </div>
       <div className="flex flex-col gap-3 w-[95%]">
-        <h2 className="text-xs md:text-base pt-4">{Project.description}</h2>
+        <h2 className="text-xs md:text-base pt-4 text-justify px-4">{Project.description}</h2>
         <div className="flex flex-col md:flex-row gap-3 justify-around px-3 pt-6 md:pt-8">
           <div className="bg-card p-3 w-full rounded ">
             <h1 className="flex gap-2 items-center font-semibold">
               <BookAudioIcon size={20} /> Key Highlights
             </h1>
-            <hr className="border rounded-full border-primary" />
+            <hr className="border rounded-full border-primary shadow-[-shadow]" />
             <ul>
               {
                  Project.highlights.map((item, index) => (
@@ -60,19 +60,19 @@ const ProjectDetile = () => {
             </h1>
             <hr className="border rounded-full border-primary" />
             <ul>
-              {Project.featured === true
+              {Project.featured === "true"
                 ? Project.features.map((item, index) => (
                     <li key={index} className="flex items-start">
                       • {item}
                     </li>
                   ))
-                : "Features Are Not Mantions"}
+                : "Features Are Not Mantion"}
             </ul>
           </div>
         </div>
-        <ul className="flex font-semibold my-5 gap-2 p-2 rounded relative bg-linear-to-r max-h-screen from-primary-foreground/40 to-primary/20">
+        <ul className="flex text-xs md:text-base font-semibold items-center my-5 md:gap-2 p-2 rounded justify-center relative bg-linear-to-r max-h-screen from-primary-foreground/40 to-primary/20">
           { Project.stack.map((item, index) => (
-                <li key={index} className="flex items-start">
+                <li key={index} className="flex">
                   {item} |
                 </li>
               ))}
@@ -81,16 +81,16 @@ const ProjectDetile = () => {
           <div className="bg-card p-3 w-full rounded ">
             <h1 className="font-semibold">What I Learn</h1>
             <hr className="border rounded-full border-primary" />
-            <ul>{Project.learning}</ul>
+            <p className="text-justify text-[14px] md:text-base">{Project.learning}</p>
           </div>
           <div className="bg-card w-full p-3 md:pl-3 md:pr-6 rounded ">
             <h1 className="font-semibold ">Challenges</h1>
             <hr className="border rounded-full border-primary" />
-            <ul>{Project.challenges}</ul>
+            <p className="text-justify text-[14px] md:text-base">{Project.challenges}</p>
           </div>
         </div>
         <div className="w-full flex gap-3 justify-center py-6 items-center">
-          <div className="w-30 bg-primary p-1 rounded hover:scale-105 hover:bg-primary/80  text-background transition-all duration-300">
+          <div className="w-30 bg-primary p-1 shadow-md rounded hover:scale-105 hover:bg-primary/70  text-background transition-all duration-300">
             <a
               className=" flex justify-center items-center gap-2"
               target="_blanck"
@@ -100,7 +100,7 @@ const ProjectDetile = () => {
               Live Link
             </a>
           </div>
-          <div className="w-30 bg-card p-1 rounded hover:scale-105 hover:bg-primary/10  text-primary transition-all duration-300">
+          <div className="w-30 bg-card p-1 shadow-md rounded  hover:scale-105 hover:bg-primary/10  text-primary transition-all duration-300">
             <a
               className=" flex justify-center items-center gap-2"
               target="_blanck"

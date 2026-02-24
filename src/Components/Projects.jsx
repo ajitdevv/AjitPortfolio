@@ -36,16 +36,16 @@ function Project() {
               data-aos="fade-up"
               data-aos-offset="150"
               key={key}
-              className="flex flex-col items-center shadow-sm  max-sm:flex-col max-sm:w-80  justify-center p-3 rounded-2xl  bg-foreground w-120 h-80 overflow-hidden"
+              className="flex flex-col items-center shadow-sm  max-sm:flex-col max-sm:w-80  justify-center p-3 rounded-xl  bg-foreground w-120 h-80 overflow-hidden group"
             >
-              <div className="overflow-hidden rounded-2xl ">
+              <div className="overflow-hidden rounded-xl">
                 <a
                   onClick={() => {
                     handelprojectdatile(project);
                   }}
                 >
                   <img
-                    className="w-100 h-47 max-sm:h-40 object-cover hover:scale-105 rounded-2xl transition-transform duration-300"
+                    className="w-full h-full max-sm:h-40 object-cover group-hover:scale-105 rounded-xl transition-transform cursor-pointer duration-300"
                     src={project.image ? project.image : null}
                     alt=" Project image not found"
                   />
@@ -63,10 +63,10 @@ function Project() {
                 </div>
                 <div className="mr-7">
                   <a href={project.demoUrl} target="_blank">
-                    <ArrowRight className="w-6 h-5 my-3 text-primary -rotate-45deg hover:rotate-0 hover:scale-125 transition-transform duration-400" />
+                    <ArrowRight className="w-6 h-5 my-3 text-primary   -rotate-45 hover:text-accent group-hover:rotate-0 group-hover:scale-125 transition-transform duration-400" />
                   </a>
                   <a href={project.gitUrl} target="_blank">
-                    <SiGit className="w-6 h-5 text-primary hover:scale-125 transition-transform duration-300" />
+                    <SiGit className="w-6 h-5 text-primary group-hover:scale-125 hover:text-accent  transition-transform duration-300" />
                   </a>
                 </div>
               </div>

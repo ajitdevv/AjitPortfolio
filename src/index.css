@@ -104,8 +104,7 @@
         --accent: #d352da;
         --primary-foreground: #FFD700;
         --card: #f3eac8;
-        --shadow: rgba(0, 0, 0, 0.5) 0px 4px 6px 1px;
-
+        --shadow: rgba(0, 0, 0, 0.52) 0px 4px 6px 1px;
     }
 
     .dark {
@@ -121,7 +120,7 @@
 
         --card: #1c252e;
 
-        --shadow: rgba(255, 255, 255, 0.3) 0px 4px 6px 1px;
+        --shadow: rgba(255, 255, 255, 0.339) 0px 4px 6px 1px;
         /* + strong shadow */
     }
 
@@ -192,7 +191,7 @@
     }
 
     .cosmic-button {
-        @apply px-2 md:px-4 py-2 rounded-full bg-primary hover:bg-primary/80 text-foreground font-medium transition-all shadow duration-300 hover:shadow-(--shadow) hover:scale-97;
+        @apply px-2 md:px-4 py-2 rounded-full bg-primary hover:bg-primary/80 text-foreground font-medium shadowhover:shadow-(--shadow) hover:scale-97;
     }
 
     .primary-button {
@@ -243,14 +242,7 @@
 
 }
 
-/* body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: #222;
-    } */
-/* @import url("https://fonts.googleapis.com/css?family=Lato:300"); */
+
 
 .gradient-border {
   --border-width: 3px;

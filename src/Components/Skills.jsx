@@ -226,7 +226,7 @@ function Skills() {
         .inear::-webkit-scrollbar{
         display: none;
         }
-        .group{
+        .Slider{
         display: flex;
         gap: 50px;
         padding-right: 20px;
@@ -300,7 +300,7 @@ function Skills() {
         </div>
       </div>
       <div className="inear border-l-2 border-r-2 no-scrollbar border-black w-[70%] max-sm:w-full ">
-        <div className="flex group flex-row gap-10 *:size-15 *:max-sm:size-10 ">
+        <div className="flex Slider flex-row gap-10 *:size-15 *:max-sm:size-10 ">
           <SiHtml5 className="icon" color="#E34F26" />
           <SiReact className="icon" color="#61DAFB" />
           <SiCss3 className="icon" color="#1572B6" />
@@ -314,7 +314,7 @@ function Skills() {
         </div>
         <div
           aria-hidden
-          className="flex group flex-row gap-10 *:size-15 *:max-sm:size-10 "
+          className="flex Slider flex-row gap-10 *:size-15 *:max-sm:size-10 "
         >
           <SiHtml5 className="icon" color="#E34F26" />
           <SiReact className="icon" color="#61DAFB" />

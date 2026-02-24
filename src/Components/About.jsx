@@ -11,20 +11,20 @@ function About() {
   return (
     <section
       id="about"
-      className=" flex flex-row justify-center gap-[5%] w-full pt-20 max-sm:flex-col max-sm:items-center max-sm:text-center max-sm:gap-10 max-sm:pb-10"
+      className=" flex justify-center gap-[5%] w-full md:pt-20 flex-col md:flex-row items-center max-sm:text-center max-sm:gap-10 max-sm:pb-10"
     >
-      <div className="p-8 h-full w-[40%] text-justify max-sm:w-[90%]">
+      <div className="p-8 h-full md:w-[40%] text-justify w-full">
         <h1
           data-aos="fade-up"
           data-aos-offset="50"
-          className="text-primary bold text-5xl font-bold flex justify-start"
+          className="text-primary bold text-2xl md:text-5xl font-bold flex justify-start"
         >
           About&nbsp;<span className="text-primary-foreground"> Me</span>
         </h1>
         <h2
           data-aos="fade-right"
           data-aos-offset="200"
-          className="text-primary w-full  text-3xl mx-auto mt-6"
+          className="text-primary w-full text-base md:text-2xl mx-auto mt-6"
           style={{ letterSpacing: "0.05rem" }}
         >
           "I’m
@@ -34,7 +34,7 @@ function About() {
             className="text-primary-foreground "
             style={{ letterSpacing: "0.01rem" }}
           >
-            <span> Ajeet Bairwa </span>
+            <span className="text-xl md:text-3xl"> Ajeet Bairwa </span>
           </a>
           , a passionate Web Developer blending code and creativity to build
           modern, responsive, and impactful digital experiences."
@@ -42,7 +42,7 @@ function About() {
         <p
           data-aos="fade-right"
           data-aos-offset="200"
-          className="text-primary text-lg mt-6 max-w-auto mx-auto"
+          className="text-primary text-sx md:text-lg mt-6 max-w-auto mx-auto"
           style={{ letterSpacing: "0.05rem" }}
         >
           Whether you need a business website, a startup platform, a personal
@@ -53,31 +53,31 @@ function About() {
         <h3
           data-aos="fade-right"
           data-aos-offset="200"
-          className="text-primary text-2xl mt-6 max-w-auto mx-auto"
+          className="text-primary text-base md:text-2xl mt-6 max-w-auto mx-auto"
         >
           I craft modern digital experiences that transform your vision into
           reality.
         </h3>
         <div className="mt-10 flex flex-row justify-around max-sm:gap-4 ">
           <a
-            className="cosmic-button w-[45%] justify-center flex max-sm:text-xs items-center text-[15px]"
+            className="cosmic-button w-[45%] justify-center flex text-xs items-center text-[15px]"
             href="#contact"
             data-aos="fade-left"
             data-aos-offset="100"
           >
             <button>Contact me</button>
           </a>
-          <Link to="/about/cv" className="cosmic-button max-sm:text-xs w-[45%] justify-center items-center flex text-[15px]" data-aos="fade-right" data-aos-offset="100">
+          <Link to="/about/cv" className="cosmic-button text-xs w-[45%] justify-center items-center flex text-[15px]" data-aos="fade-right" data-aos-offset="100">
             <button>Resume</button>
           </Link>
           
 
         </div>
       </div>
-      <div data-aos="fade-left" className="w-[30%] items-center justify-center flex max-sm:w-[70%]">
+      <div data-aos="fade-left" className="w-[30%] h-[70%] rounded-8xl  gradient-border items-center justify-center flex max-sm:w-[70%]">
         <img
           src={logo}
-          className="h-[70% rounded-4xl -xl object-cover"
+          className="h-full rounded-xl object-cover"
         />
       </div>
     </section>

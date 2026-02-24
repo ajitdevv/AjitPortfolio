@@ -1,106 +1,19 @@
-import project1 from "../assets/image/musicwebsite.png";
-import project2 from "../assets/image/moviewebsite.png";
-import project3 from "../assets/image/portfoliowebsite.png";
-import project4 from "../assets/image/Landingpage.png";
-import project5 from "../assets/image/Myshop.png";
-import project6 from "../assets/image/homepageblogWebApp.png";
 import { ArrowRight } from "lucide-react";
 import { SiGit } from "react-icons/si";
 import { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-const projects = [
-  {
-    id: 1,
-    title: "MyShop",
-    Description:
-      "MyShop is a modern and responsive React-based E-commerce web application built to demonstrate real-world frontend development skills. The project features dynamic routing, category-based product filtering through interactive home page images, centralized state management using Redux Toolkit, and complete cart and order functionality.",
-    image: project5,
-    tags: [
-      "React",
-      "Redux Toolkit",
-      "React Router",
-      "Tailwind CSS",
-      "Responsive UI",
-    ],
-    demoUrl: "https://myshopdev.vercel.app/",
-    gitUrl: "https://github.com/ajitdevv/myshop",
-  },
-  {
-    id: 6,
-    title: "Blog WebApp",
-    Description:
-      "A production-ready Blog Application built using Next.js (App Router) with Server-Side Rendering (SSR). The platform allows users to create, edit, and manage blogs through a structured dashboard with full CRUD functionality. It includes rich text formatting (headings, lists, images, links, bold/italic styling), dynamic routing for blog detail pages, and proper SEO implementation using metadata optimization. The application follows clean UI principles with TailwindCSS and is deployed for live access.",
-    image: project6,
-    tags: [
-      "Next.js",
-      "React",
-      "API Route Handlers",
-      "Rich Text Editor Integration",
-      "Tailwind CSS",
-      "Responsive UI",
-      "Vercel Deployment",
-    ],
-    demoUrl: "https://blog-webapp-mu-eight.vercel.app/",
-    gitUrl: "https://github.com/ajitdevv/blog-webapp",
-  },
 
-  {
-    id: 2,
-    title: "Movie Day",
-    Description:
-    "Built a responsive Movie Web App with a clean UI, allowing users to browse, search, and explore movie details. Integrated a real-time Movies API for dynamic content. Optimized for mobile and desktop, and deployed on Vercel for fast, reliable performance.",
-    image: project2,
-    tags: ["React.js ", "Tailwind CSS ", "API ", "Vercel"],
-    demoUrl: "https://movie-app-nine-opal.vercel.app/",
-    gitUrl: "https://github.com/ajitdevv/movie-app",
-  },
-  {
-    id: 3,
-    title: "Marketing Landing Page",
-    Description:
-      "Designed and developed a modern, conversion-focused marketing landing page with a clean UI and responsive layout. Built reusable sections such as hero, features, testimonials, and call-to-action using React.js and Tailwind CSS. Optimized for performance and deployed to production on Vercel.",
-    image: project4,
-    tags: ["React.js ", "Tailwind CSS ", "Responsive UI ", "Vercel"],
-    demoUrl: "https://morden-landing-page-psi.vercel.app/",
-    gitUrl: "https://github.com/ajitdevv/MordenLandingPage",
-  },
-  {
-    id: 4,
-    title: "Music Night",
-    Description:
-      "Designed and developed a clean and responsive Music Website UI that allows users to seamlessly explore various music categories. The interface focuses on a modern layout, smooth interactions, and mobile-first responsiveness to ensure an optimized experience across all devices.",
-    image: project1,
-    tags: ["HTML ", "CSS ", "JavaScript ", "Responsive UI "],
-    demoUrl: "https://ajitdevv.github.io/music-website/",
-    gitUrl: "https://github.com/ajitdevv/music-website",
-  },
-  {
-    id: 5,
-    title: "Developer Portfolio",
-    Description:
-      "Architected and developed a modern, production-ready personal portfolio to showcase frontend projects and skills. Built with React.js and Tailwind CSS using a component-driven approach, featuring responsive layouts, dark/light theme support, smooth animations, and optimized performance. Deployed to Vercel with a focus on clean UI, accessibility, and fast load times.",
-    image: project3,
-    tags: [
-      "React.js ",
-      "Tailwind CSS ",
-      "Responsive UI ",
-      "Dark Mode ",
-      "Vercel",
-    ],
-    demoUrl: "https://ajit-portfolio-rust.vercel.app/",
-    gitUrl: "https://github.com/ajitdevv/portfolio",
-  },
-];
+import { projects } from "../lid/utils";
+import { useNavigate } from "react-router-dom";
 
 function Project() {
   useEffect(() => {
     AOS.init();
   }, []);
-  const [expandId, setexpandId] = useState(null);
-
-  const toggleExpand = (id) => {
-    setexpandId(expandId === id ? null : id);
+  let Navgation = useNavigate();
+  const handelprojectdatile = (project) => {
+    Navgation(`/project/${project.id}`);
   };
   return (
     <section
@@ -118,8 +31,6 @@ function Project() {
       </div>
       <div className="flex flex-row flex-wrap max-sm:flex-col  justify-center gap-5">
         {projects.map((project, key) => {
-          const isExpanded = expandId === project.id;
-          const shortText = project.Description.substring(0, 20);
           return (
             <div
               data-aos="fade-up"
@@ -128,25 +39,27 @@ function Project() {
               className="flex flex-col items-center shadow-sm  max-sm:flex-col max-sm:w-80  justify-center p-3 rounded-2xl  bg-foreground w-120 h-80 overflow-hidden"
             >
               <div className="overflow-hidden rounded-2xl ">
-                <img
-                  className="w-100 h-47 max-sm:h-40 object-cover hover:scale-105 rounded-2xl transition-transform duration-300"
-                  src={project.image ? project.image : null}
-                  alt=" Project image not found"
-                />
+                <a
+                  onClick={() => {
+                    handelprojectdatile(project);
+                  }}
+                >
+                  <img
+                    className="w-100 h-47 max-sm:h-40 object-cover hover:scale-105 rounded-2xl transition-transform duration-300"
+                    src={project.image ? project.image : null}
+                    alt=" Project image not found"
+                  />
+                </a>
               </div>
               <div className="flex flex-row justify-between items-start w-full">
                 <div className="flex flex-col justify- items-start  *:text-primary">
-                  <h2 className="highlight-tex ml-5 text-xl">{project.tags}</h2>
                   <h3 className="text-lg ml-5 font-bold">{project.title}</h3>
-                  <p className=" ml-5 ">
-                    {isExpanded ? project.Description : shortText + "..."} "
-                    <button
-                      onClick={() => toggleExpand(project.id)}
-                      className="primary-button ml-7 hover:underline"
-                    >
-                      {isExpanded ? "Read Less" : " Read More"}
-                    </button>
-                  </p>
+                  <h2 className="highlight-tex ml-5 md:text-xl">
+                    Category :- {project.category}
+                  </h2>
+                  <h2 className="highlight-tex ml-5 text-sx md:text-base">
+                    Status :- {project.status}
+                  </h2>
                 </div>
                 <div className="mr-7">
                   <a href={project.demoUrl} target="_blank">

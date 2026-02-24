@@ -255,7 +255,7 @@ function Skills() {
           data-aos="fade-down"
           data-aos-offset="150"
           data-aos-duration="1000"
-          className="flex gap-4 max-sm:gap-0 max-w-sm:[90%] items-center justify-center mt-5 mb-7"
+          className="flex gap-4 max-sm:gap-0 max-w-[90%] items-center justify-center mt-5 mb-7"
         >
           {cetegry.map((cetegry, key) => {
             return (
@@ -275,21 +275,24 @@ function Skills() {
             );
           })}
         </div>
-        <div  data-aos="fade-up"
+        <div
+          data-aos="fade-up"
           data-aos-offset="150"
-          data-aos-duration="1000" className="grid grid-cols-4 max-sm:grid-cols-2 place-items-center justify-center items-center gap-x-15 gap-8 max-sm:gap-4">
+          data-aos-duration="1000"
+          className="grid md:grid-cols-4 grid-cols-2 place-items-center justify-center items-center md:gap-x-15 md:gap-8 gap-2"
+        >
           {filteredSkills.map((skill, key) => {
             return (
               <div
                 key={key}
-                className="flex flex-row w-38 gap-2 card items-start rounded-2xl hover:scale-115 transition-transform transition-duration:300px> "
+                className="flex flex-row w-38  gap-2 card items-start rounded-2xl hover:scale-115 transition-all duration-300> "
               >
                 <div>
                   <skill.Icon size={40} color={skill.color} />
                 </div>
                 <div className="items-start ">
                   <h1 className="text-primary font-bold">{skill.title}</h1>
-                  <h3 className="text-primary pl-1 w-max">{skill.exprince}</h3>
+                  <h3 className="text-primary text-xs pl-1 w-max">{skill.exprince}</h3>
                 </div>
               </div>
             );
@@ -309,7 +312,10 @@ function Skills() {
           <SiTailwindcss className="icon" color="#38B2AC" />
           <SiJavascript className="icon" color="#F7DF1E" />
         </div>
-        <div aria-hidden className="flex group flex-row gap-10 *:size-15 *:max-sm:size-10 ">
+        <div
+          aria-hidden
+          className="flex group flex-row gap-10 *:size-15 *:max-sm:size-10 "
+        >
           <SiHtml5 className="icon" color="#E34F26" />
           <SiReact className="icon" color="#61DAFB" />
           <SiCss3 className="icon" color="#1572B6" />

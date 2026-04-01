@@ -1,4 +1,4 @@
-import logo from "../assets/image/reminihi.png";
+import Developer from "../assets/image/DeveloperImage.jpg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useState, useEffect } from "react";
@@ -76,7 +76,7 @@ function About() {
       </div>
       <div data-aos="fade-left" className="w-[30%] h-[70%] rounded-8xl  gradient-border items-center justify-center flex max-sm:w-[70%]">
         <img
-          src={logo}
+          src={Developer}
           className="h-full rounded-xl object-cover"
         />
       </div>

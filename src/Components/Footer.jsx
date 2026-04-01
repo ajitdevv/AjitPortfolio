@@ -59,12 +59,12 @@ function Footer() {
           </div>
           <div>
             <h2 className="text-xl font-semibold mb-2">Contact</h2>
-            <p className="text-gray-400">Email: Ajitdev014@gamil.com</p>
+            <p className="text-gray-400">Email: Ajeetbairwa57@gamil.com</p>
             <p className="text-gray-400">Phone: +91 80583 39867</p>
           </div>
         </div>
         <div className="text-center text-gray-500 mt-8 text-sm">
-          © {new Date().getFullYear()} Ajit Dev — All Rights Reserved.
+          © {new Date().getFullYear()} Ajeet Bairwa — All Rights Reserved.
         </div>
       </footer>
     </>

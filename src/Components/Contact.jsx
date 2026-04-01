@@ -169,7 +169,7 @@ function Contact() {
 
             {/* Gmail */}
             <a
-              href="mailto:ajitdev014@gmail.com"
+              href="mailto:ajeetbairwa57@gmail.com"
               target="_blank"
               data-aos="fade-up"
               data-aos-offset="150"
@@ -177,7 +177,7 @@ function Contact() {
               <div className="flex flex-row justify-between bg-foreground py-5 rounded-2xl hover:scale-110 transition-transform duration-300">
                 <h1 className="text-primary px-6 flex gap-2">
                   <BsMailbox className="size-8 text-red-500" />
-                  ajitdev014@gmail.com
+                  ajeetbairwa57@gmail.com
                 </h1>
                 <ArrowRight className="text-primary" />
               </div>

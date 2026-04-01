@@ -1,4 +1,4 @@
-import logo from "../assets/image/Portfoliodev.jpg";
+import logo from "../assets/image/reminihi.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useState, useEffect } from "react";

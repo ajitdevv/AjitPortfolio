@@ -1,11 +1,66 @@
 import Musicwebsite from "../assets/image/musicwebsite.png";
 import Moviewbsite from "../assets/image/moviewebsite.png";
 import Portfoliowebsite from "../assets/image/portfoliowebsite.png";
-import Landingpage from "../assets/image/Landingpage.png";
+// import Landingpage from "../assets/image/Landingpage.png";
 import MyShopwebapp from "../assets/image/Myshop.png";
 import BlogwebApp from "../assets/image/homepageblogWebApp.png";
-
+import AdminDashboardImage from "../assets/image/AdminDashboard.png"
 export const projects = [
+    {
+        id: 20,
+        title: "Admin Dashboard System",
+        category: "Full Stack",
+        level: "Advanced",
+        featured: true,
+
+        description:
+            "Production-ready Admin Dashboard built using React with real-time data handling, filtering, pagination, authentication, and complete CRUD operations for managing deals, reports, and contacts.",
+
+        highlights: [
+            "Authentication with cookies (secure login)",
+            "Advanced filtering & sorting system",
+            "Pagination for large datasets",
+            "Reusable component architecture",
+            "Real-time UI feedback (loading, error, retry)",
+            "Protected routes with role-based access"
+        ],
+
+        features: [
+            "Manage Deals (Create, View, Delete)",
+            "Reports filtering (type, status, priority, user)",
+            "Contacts management with sorting",
+            "Search + filter combination",
+            "Toast notifications for actions",
+            "Retry system on API failure",
+            "Skeleton loaders for better UX"
+        ],
+
+        stack: [
+            "React",
+            "Tailwind CSS",
+            "Node.js",
+            "Express",
+            "MongoDB",
+            "Vercel"
+        ],
+
+        learning:
+            "Learned real-world dashboard architecture, API integration, performance optimization using useMemo and React.memo, authentication flow using cookies, and scalable component design.",
+
+        challenges:
+            "Handling unnecessary re-renders in large lists, managing filter + pagination together, maintaining consistent API structure, and optimizing UX with loaders and error states.",
+
+        image: AdminDashboardImage, 
+        screenshots: [AdminDashboardImage],
+
+        tags: ["React", "Dashboard", "CRUD", "Authentication", "Performance"],
+
+        demoUrl: "https://admin-dashboard-rose-tau-43.vercel.app/",
+        gitUrl: "https://github.com/ajitdevv/GoldenGlowBeautyParlour",  
+
+        status: "Live",
+        createdAt: "2026-03-30T10:00:00"
+    },
     {
         id: 1,
         title: "Blog WebApp",
@@ -184,36 +239,36 @@ export const projects = [
         createdAt: "2025-12-15T19:40:00"
     },
 
-    {
-        id: 5,
-        title: "Marketing Landing Page",
-        category: "UI / Frontend",
-        level: "Intermediate",
-        featured: false,
+    // {
+    //     id: 5,
+    //     title: "Marketing Landing Page",
+    //     category: "UI / Frontend",
+    //     level: "Intermediate",
+    //     featured: false,
 
-        description:
-            "Modern marketing landing page designed with reusable UI sections and conversion-focused layout.",
+    //     description:
+    //         "Modern marketing landing page designed with reusable UI sections and conversion-focused layout.",
 
-        highlights: [
-            "Hero section",
-            "Feature blocks",
-            "Testimonials",
-            "Call-to-action"
-        ],
+    //     highlights: [
+    //         "Hero section",
+    //         "Feature blocks",
+    //         "Testimonials",
+    //         "Call-to-action"
+    //     ],
 
-        stack: ["React", "Tailwind CSS", "Vercel"],
+    //     stack: ["React", "Tailwind CSS", "Vercel"],
 
-        image: Landingpage,
-        screenshots: [Landingpage],
+    //     image: Landingpage,
+    //     screenshots: [Landingpage],
 
-        tags: ["React", "Tailwind"],
+    //     tags: ["React", "Tailwind"],
 
-        demoUrl: "https://morden-landing-page-psi.vercel.app/",
-        gitUrl: "https://github.com/ajitdevv/MordenLandingPage",
+    //     demoUrl: "https://morden-landing-page-psi.vercel.app/",
+    //     gitUrl: "https://github.com/ajitdevv/MordenLandingPage",
 
-        status: "Live",
-        createdAt: "2025-11-30T18:20:00"
-    },
+    //     status: "Live",
+    //     createdAt: "2025-11-30T18:20:00"
+    // },
 
     {
         id: 6,

@@ -59,7 +59,7 @@ const ProjectDetile = () => {
             </h1>
             <hr className="border rounded-full border-primary" />
             <ul>
-              {Project.featured === "true"
+              {Project.featured === true
                 ? Project.features.map((item, index) => (
                     <li key={index} className="flex items-start">
                       • {item}

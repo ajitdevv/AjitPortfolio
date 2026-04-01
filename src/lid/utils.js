@@ -9,7 +9,7 @@ export const projects = [
     {
         id: 20,
         title: "Admin Dashboard System",
-        category: "Full Stack",
+        category: "Frontend",
         level: "Advanced",
         featured: true,
 

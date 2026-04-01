@@ -4,7 +4,7 @@ import Home from "./Pages/Home.jsx";
 import NotFoundPage from "./Pages/Notfound.jsx";
 import Cv from "./Components/Cv.jsx";
 import About from "./Components/About.jsx";
-import ProjectDetile from "./Pages/ProjectDetile.jsx";
+import ProjectDetile from "./Pages/ProjectDetail.jsx";
 function App() {
   return (
     <Routes>

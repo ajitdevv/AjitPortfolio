@@ -1,7 +1,7 @@
 import ThemeToggle from "../Components/ThemeTogggle";
 import Navbar from "../Components/Navbar";
 import Starbackground from "../Components/background";
-import Herosection from "../Components/Herosection";
+import HeroSection from "../Components/HeroSection";
 import About from "../Components/About";
 import Skills from "../Components/Skills";
 import Project from "../Components/Projects";
@@ -22,7 +22,7 @@ function home() {
       {/* Main content */}
       <main>
         <Topbutton/>
-        <Herosection />
+        <HeroSection />
         <About />
         <Skills />
         <Project />

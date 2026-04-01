@@ -1,26 +1,26 @@
 import { useParams } from "react-router-dom";
 import { projects } from "../lid/utils";
 import { ArrowRightSquareIcon, BookAudioIcon, GithubIcon } from "lucide-react";
-const ProjectDetile = () => {
+const ProjectDetail = () => {
   let { id } = useParams();
   let Project = projects.find((e) => e.id.toString() === id.toString());
   if (!Project) {
     return (
       <h1 className="flex justify-center items-center text-3xl">
-        This Project Not found
+        This project was not found
       </h1>
     );
   }
   return (
     <div className="text-primary w-full flex flex-col justify-center items-center">
-      <div className="w-full relative bg-linear-to-r max-h-screen from-primary-foreground/20 to-primary-foregroun/50">
+      <div className="w-full relative bg-linear-to-r max-h-screen from-primary-foreground/20 to-primary-foreground/50">
         <div className="w-full h-60 md:h-80 flex justify-center items-center">
           <img
             className="w-[70%] md:max-h-60 rounded-2xl "
             src={Project.image}
             alt={Project.title}
           />
-        </div>{" "}
+        </div>
         <div className="flex flex-col gap-4 items-start p-3 absolute left-0 bottom-0">
           <h1 className="text-base md:text-2xl font-bold text-primary">
             {Project.title}
@@ -45,7 +45,7 @@ const ProjectDetile = () => {
             <hr className="border rounded-full border-primary shadow-[-shadow]" />
             <ul>
               {
-                 Project.highlights.map((item, index) => (
+                 Project?.highlights?.map((item, index) => (
                     <li key={index} className="flex items-start">
                       • {item}
                     </li>
@@ -55,7 +55,7 @@ const ProjectDetile = () => {
           </div>
           <div className="bg-card w-full p-3 md:pl-3 md:pr-6 rounded ">
             <h1 className="flex gap-2 items-center font-semibold ">
-              <BookAudioIcon size={20} /> Fratures
+              <BookAudioIcon size={20} /> Features
             </h1>
             <hr className="border rounded-full border-primary" />
             <ul>
@@ -65,7 +65,7 @@ const ProjectDetile = () => {
                       • {item}
                     </li>
                   ))
-                : "Features Are Not Mantion"}
+                : "Features are not mentioned"}
             </ul>
           </div>
         </div>
@@ -78,7 +78,7 @@ const ProjectDetile = () => {
         </ul>
         <div className="flex flex-col md:flex-row gap-3 justify-around px-3 pt-6 md:pt-8">
           <div className="bg-card p-3 w-full rounded ">
-            <h1 className="font-semibold">What I Learn</h1>
+            <h1 className="font-semibold">What I Learned</h1>
             <hr className="border rounded-full border-primary" />
             <p className="text-justify text-[14px] md:text-base">{Project.learning}</p>
           </div>
@@ -92,7 +92,7 @@ const ProjectDetile = () => {
           <div className="w-30 bg-primary p-1 shadow-md rounded hover:scale-105 hover:bg-primary/70  text-background transition-all duration-300">
             <a
               className=" flex justify-center items-center gap-2"
-              target="_blanck"
+              target="_blank"
               href={Project.demoUrl}
             >
               <ArrowRightSquareIcon size={20} />
@@ -102,7 +102,7 @@ const ProjectDetile = () => {
           <div className="w-30 bg-card p-1 shadow-md rounded  hover:scale-105 hover:bg-primary/10  text-primary transition-all duration-300">
             <a
               className=" flex justify-center items-center gap-2"
-              target="_blanck"
+              target="_blank"
               href={Project.gitUrl}
             >
               <GithubIcon size={20} />
@@ -114,4 +114,4 @@ const ProjectDetile = () => {
     </div>
   );
 };
-export default ProjectDetile;
+export default ProjectDetail;

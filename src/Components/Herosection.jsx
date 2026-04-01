@@ -2,7 +2,7 @@ import { MoveDown } from "lucide-react";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-function Herosection() {
+function HeroSection() {
   useEffect(() => {
     AOS.init();
   }, []);
@@ -17,13 +17,13 @@ function Herosection() {
         data-aos-duration="1000"
         className="text-5xl max-sm:w-50 font-bold"
       >
-        <span className="text-primary">Hi,I'm </span>
+        <span className="text-primary">Hi, I'm </span>
         <span className="text-primary-foreground">Frontend </span>
         <span className="text-primary">Developer</span>
       </h1>
       <p className="text-primary w-120 gap-t-6 text-s text-center mt-4 max-sm:w-56 ">
-        "I bulid responsive, user-friendly frontend with modern web
-        technologies, focused on clean and efficient code "{" "}
+        I build responsive, user-friendly frontend interfaces with modern web
+        technologies, focused on clean and efficient code 
       </p>
       <a href="#projects">
         <button
@@ -42,4 +42,4 @@ function Herosection() {
     </section>
   );
 }
-export default Herosection;
+export default HeroSection;

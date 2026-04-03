@@ -198,7 +198,6 @@ function Contact() {
                 <ArrowRight className="text-primary" />
               </div>
             </a>
-
             {/* WhatsApp */}
             <a
               href="https://wa.me/918058339867"

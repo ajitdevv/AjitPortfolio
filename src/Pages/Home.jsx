@@ -1,4 +1,3 @@
-import ThemeToggle from "../Components/ThemeTogggle";
 import Navbar from "../Components/Navbar";
 import Starbackground from "../Components/background";
 import HeroSection from "../Components/HeroSection";
@@ -8,27 +7,24 @@ import Project from "../Components/Projects";
 import Contact from "../Components/Contact";
 import Footer from "../Components/Footer";
 import Topbutton from "../Components/Topbutton";
+import ScrollProgress from "../Components/ScrollProgress";
+import CursorGlow from "../Components/CursorGlow";
 
 function home() {
   return (
-    <div className="min-h-screen costum-scroll bg-background text-foreground overflow-x-hidden">
-      {/* Theme toggle */}
-      <ThemeToggle />
-      {/* Background Effect */}
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+      <ScrollProgress />
+      <CursorGlow />
       <Starbackground />
-
-      {/* Navbar */}
       <Navbar />
-      {/* Main content */}
       <main>
-        <Topbutton/>
+        <Topbutton />
         <HeroSection />
         <About />
         <Skills />
         <Project />
         <Contact />
       </main>
-      {/* Footer */}
       <Footer />
     </div>
   );

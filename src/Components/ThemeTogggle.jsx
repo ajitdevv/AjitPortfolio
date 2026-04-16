@@ -1,13 +1,9 @@
 import { Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
 
-import AOS from "aos";
-import "aos/dist/aos.css";
 function ThemeToggle() {
-  useEffect(() => {
-    AOS.init();
-  }, []);
   const [isdarkmode, setisdarkmode] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const theme = localStorage.getItem("theme");
@@ -18,6 +14,12 @@ function ThemeToggle() {
       document.documentElement.classList.remove("dark");
       setisdarkmode(false);
     }
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const toggleTheme = () => {
@@ -31,20 +33,26 @@ function ThemeToggle() {
       setisdarkmode(true);
     }
   };
+
   return (
     <button
-      data-aos="fade-left"
-      data-aos-offset="150"
-      data-aos-duration="1000"
       onClick={toggleTheme}
-      className="fixed top-4.5 right-18.5 z-200 p-2 rounded-full transition-colors duration-700 ease-in-out focus: outline-hidden hover:scale-110"
+      className={`fixed z-[200] p-2 rounded-full glass transition-all duration-700 ease-[cubic-bezier(0.25,0.8,0.25,1)] hover:scale-110 hover:shadow-[0_0_15px_var(--primary-foreground)] ${
+        scrolled
+          ? "top-2 right-28 md:top-2.5 md:right-36"
+          : "top-5 right-6 md:top-6 md:right-20"
+      }`}
+      aria-label="Toggle theme"
     >
-      {isdarkmode ? (
-        <Sun className="h-6 w-6 text-[#d352da] t transition-transform duration-700 ease-in-out " />
-      ) : (
-        <Moon className="h-6 w-6 text-[#ffd700] transition-transform duration-700 ease-in-out " />
-      )}
+      <span className={`block transition-all duration-500 ${isdarkmode ? "rotate-180" : "rotate-0"}`}>
+        {isdarkmode ? (
+          <Sun className="h-5 w-5 text-primary-foreground" />
+        ) : (
+          <Moon className="h-5 w-5 text-primary-foreground" />
+        )}
+      </span>
     </button>
   );
 }
+
 export default ThemeToggle;

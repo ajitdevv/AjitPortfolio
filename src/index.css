@@ -47,6 +47,13 @@
         }
     }
 
+    --animate-blink: blink 0.8s step-end infinite;
+
+    @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+    }
+
     @keyframes fade-in {
         from {
             opacity: 0;
@@ -105,13 +112,14 @@
         --primary-foreground: #FFD700;
         --card: #f3eac8;
         --shadow: rgba(0, 0, 0, 0.52) 0px 4px 6px 1px;
+        --glass-rgb: 255, 251, 234;
+        --glass-border-rgb: 0, 0, 0;
     }
 
     .dark {
         --border: #334155;
 
         --background: #0f172a;
-        /* --foreground: #12171f; */
         --foreground: #0e1217;
 
         --primary: #f8fafc;
@@ -121,7 +129,8 @@
         --card: #1c252e;
 
         --shadow: rgba(255, 255, 255, 0.339) 0px 4px 6px 1px;
-        /* + strong shadow */
+        --glass-rgb: 15, 23, 42;
+        --glass-border-rgb: 255, 255, 255;
     }
 
 
@@ -190,17 +199,126 @@
         border: 1px solid transparent;
     }
 
-    .cosmic-button {
-        @apply px-2 md:px-4 py-2 rounded-full bg-primary hover:bg-primary/80 text-foreground font-medium hover:shadow-md hover:scale-97;
+    /* ===== BUTTON SYSTEM ===== */
+
+    /* Primary filled button — gradient accent with glow */
+    .btn-primary {
+        @apply relative px-6 py-2.5 rounded-xl font-semibold text-sm transition-all duration-400 overflow-hidden;
+        background: linear-gradient(135deg, var(--primary-foreground), var(--accent));
+        color: #000;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
+    .btn-primary::before {
+        content: "";
+        @apply absolute inset-0 rounded-xl opacity-0 transition-opacity duration-400;
+        background: linear-gradient(135deg, var(--accent), var(--primary-foreground));
+    }
+    .btn-primary:hover::before { opacity: 1; }
+    .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px var(--primary-foreground), 0 0 40px rgba(var(--glass-border-rgb),0.08);
+    }
+    .btn-primary:active { transform: translateY(0); }
+    .btn-primary span { @apply relative z-10; }
+
+    /* Outline glass button — border + backdrop blur */
+    .btn-outline {
+        @apply px-6 py-2.5 rounded-xl font-semibold text-sm transition-all duration-400;
+        color: var(--primary);
+        border: 1.5px solid var(--primary-foreground);
+        background: rgba(var(--glass-rgb), 0.3);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+    }
+    .btn-outline:hover {
+        background: rgba(var(--glass-rgb), 0.5);
+        border-color: var(--accent);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+    .btn-outline:active { transform: translateY(0); }
+
+    /* Ghost button — minimal with underline animation */
+    .btn-ghost {
+        @apply relative px-4 py-2 font-medium text-sm transition-all duration-300;
+        color: var(--primary);
+    }
+    .btn-ghost::after {
+        content: "";
+        @apply absolute bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 rounded-full transition-all duration-300;
+        background: var(--primary-foreground);
+    }
+    .btn-ghost:hover::after { width: 70%; }
+    .btn-ghost:hover { color: var(--primary-foreground); }
+
+    /* Navbar pill button */
+    .btn-nav {
+        @apply px-4 py-1.5 rounded-full font-medium text-sm transition-all duration-300;
+        background: linear-gradient(135deg, var(--primary-foreground), var(--accent));
+        color: #000;
+    }
+    .btn-nav:hover {
+        box-shadow: 0 4px 15px var(--primary-foreground);
+        transform: translateY(-1px);
+    }
+
+    /* Legacy cosmic-button kept for compatibility */
+    .cosmic-button {
+        @apply relative px-5 py-2.5 rounded-xl font-semibold text-sm transition-all duration-400 overflow-hidden;
+        background: linear-gradient(135deg, var(--primary-foreground), var(--accent));
+        color: #000;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .cosmic-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px var(--primary-foreground);
+    }
+    .cosmic-button:active { transform: translateY(0); }
 
     .primary-button {
-        @apply px-2 py-1 rounded-full bg-background text-accent font-medium transition-all duration-300 hover:scale-95;
+        @apply px-5 py-2.5 rounded-xl font-semibold text-sm transition-all duration-400;
+        color: var(--primary);
+        border: 1.5px solid var(--primary-foreground);
+        background: rgba(var(--glass-rgb), 0.3);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+    }
+    .primary-button:hover {
+        background: rgba(var(--glass-rgb), 0.5);
+        border-color: var(--accent);
+        transform: translateY(-2px);
     }
 
+    .glass {
+        background: rgba(var(--glass-rgb), 0.55);
+        backdrop-filter: blur(16px) saturate(1.8);
+        -webkit-backdrop-filter: blur(16px) saturate(1.8);
+        border: 1px solid rgba(var(--glass-border-rgb), 0.08);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+
+    .glass-strong {
+        background: rgba(var(--glass-rgb), 0.7);
+        backdrop-filter: blur(24px) saturate(2);
+        -webkit-backdrop-filter: blur(24px) saturate(2);
+        border: 1px solid rgba(var(--glass-border-rgb), 0.1);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    }
+
+    .glass-subtle {
+        background: rgba(var(--glass-rgb), 0.35);
+        backdrop-filter: blur(10px) saturate(1.5);
+        -webkit-backdrop-filter: blur(10px) saturate(1.5);
+        border: 1px solid rgba(var(--glass-border-rgb), 0.06);
+    }
 
     .card {
-        @apply p-3 rounded-2xl bg-card
+        @apply p-3 rounded-2xl;
+        background: rgba(var(--glass-rgb), 0.45);
+        backdrop-filter: blur(12px) saturate(1.6);
+        -webkit-backdrop-filter: blur(12px) saturate(1.6);
+        border: 1px solid rgba(var(--glass-border-rgb), 0.08);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.08);
     }
 
 
@@ -279,4 +397,19 @@
   50% {
     background-position: 100% 50%;
   }
+}
+
+/* Skills marquee */
+.marquee-track {
+  animation: marquee 20s linear infinite;
+  width: max-content;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }

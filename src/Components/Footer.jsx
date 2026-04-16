@@ -1,73 +1,98 @@
 import { BsGithub, BsInstagram, BsLinkedin } from "react-icons/bs";
-import { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import { Heart } from "lucide-react";
+import { useScrollReveal } from "../hooks/useAnimations";
+
 function Footer() {
-  useEffect(() => {
-    AOS.init();
-  }, []);
+  const [footerRef, footerVisible] = useScrollReveal({ threshold: 0.1 });
+
   return (
-    <>
-      <div data-aos="fade-up" data-aos-offset="300" className="w-full">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1440 320"
-          className="fill-foreground"
-        >
-          <path d="M0,128L60,112C120,96,240,64,360,85.3C480,107,600,181,720,213.3C840,245,960,235,1080,208C1200,181,1320,139,1380,117.3L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
-        </svg>
-      </div>
-      <footer className="w-full bg-foreground text-primary py-10 mt-0">
-        <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-10">
-          <div>
-            <h1 className="text-3xl font-bold text-primary">Ajeet Bairwa</h1>
-            <p className="text-sm mt-3 text-gray-400 max-w-xs">
-              Frontend developer – creating modern and creative web experiences.
+    <footer ref={footerRef} className="relative mt-20 px-4 pb-8">
+      {/* Floating glass blob */}
+      <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-96 h-32 rounded-full bg-primary-foreground/5 blur-3xl pointer-events-none" />
+
+      {/* Main glass footer card */}
+      <div
+        className={`max-w-5xl mx-auto glass-strong rounded-3xl p-6 md:p-10 transition-all duration-1000 ${
+          footerVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+        }`}
+      >
+        <div className="flex flex-col md:flex-row justify-between gap-8 md:gap-10">
+          {/* Brand */}
+          <div className="flex-1 text-left">
+            <h1 className="text-2xl md:text-3xl font-bold text-primary">
+              Ajeet<span className="text-primary-foreground">.</span>
+            </h1>
+            <p className="text-primary/50 text-sm mt-3 max-w-xs">
+              Frontend developer crafting modern, creative, and performant web experiences.
             </p>
-            <div className="flex justify-center items-center gap-5 mt-4">
-              <a href="https://www.instagram.com/ajitdevv/" target="_blank">
-                <BsInstagram className="w-6 h-6 hover:scale-125 transition-transform" />
-              </a>
-              <a href="https://github.com/ajitdevv" target="_blank">
-                <BsGithub className="w-6 h-6 hover:scale-125 transition-transform" />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/ajeet-dev-947287330/"
-                target="_blank"
-              >
-                <BsLinkedin className="w-6 h-6 hover:scale-125 transition-transform" />
-              </a>
+            <div className="flex gap-3 mt-5">
+              {[
+                { Icon: BsInstagram, href: "https://www.instagram.com/ajitdevv/", color: "hover:text-pink-500" },
+                { Icon: BsGithub, href: "https://github.com/ajitdevv", color: "hover:text-primary-foreground" },
+                { Icon: BsLinkedin, href: "https://www.linkedin.com/in/ajeet-dev-947287330/", color: "hover:text-blue-500" },
+              ].map(({ Icon, href, color }, i) => (
+                <a
+                  key={i}
+                  href={href}
+                  target="_blank"
+                  className={`p-2.5 rounded-xl glass-subtle text-primary/60 ${color} transition-all duration-300 hover:scale-110`}
+                >
+                  <Icon size={18} />
+                </a>
+              ))}
             </div>
           </div>
-          <div className="flex flex-col">
-            <h2 className="text-xl font-semibold mb-2">Quick Links</h2>
-            <a href="#home" className="text-gray-400 hover:text-primary">
-              Home
-            </a>
-            <a href="#about" className="text-gray-400 hover:text-primary">
-              About
-            </a>
-            <a href="#skills" className="text-gray-400 hover:text-primary">
-              Skills
-            </a>
-            <a href="#projects" className="text-gray-400 hover:text-primary">
-              Projects
-            </a>
-            <a href="#contact" className="text-gray-400 hover:text-primary">
-              Contact
-            </a>
+
+          {/* Quick Links */}
+          <div className="text-left">
+            <h2 className="text-primary font-semibold text-sm mb-3">Quick Links</h2>
+            <div className="flex flex-col gap-1.5">
+              {["Home", "About", "Skills", "Projects", "Contact"].map((name) => (
+                <a
+                  key={name}
+                  href={`#${name.toLowerCase()}`}
+                  className="text-primary/40 text-sm hover:text-primary-foreground transition-colors duration-300 hover:translate-x-1 inline-block"
+                >
+                  {name}
+                </a>
+              ))}
+            </div>
           </div>
-          <div>
-            <h2 className="text-xl font-semibold mb-2">Contact</h2>
-            <p className="text-gray-400">Email: Ajeetbairwa57@gamil.com</p>
-            <p className="text-gray-400">Phone: +91 80583 39867</p>
+
+          {/* Contact Info */}
+          <div className="text-left">
+            <h2 className="text-primary font-semibold text-sm mb-3">Contact</h2>
+            <div className="flex flex-col gap-1.5">
+              <a
+                href="mailto:ajeetbairwa57@gmail.com"
+                className="text-primary/40 text-sm hover:text-primary-foreground transition-colors duration-300"
+              >
+                ajeetbairwa57@gmail.com
+              </a>
+              <a
+                href="tel:+918058339867"
+                className="text-primary/40 text-sm hover:text-primary-foreground transition-colors duration-300"
+              >
+                +91 80583 39867
+              </a>
+              <p className="text-primary/40 text-sm">India</p>
+            </div>
           </div>
         </div>
-        <div className="text-center text-gray-500 mt-8 text-sm">
-          © {new Date().getFullYear()} Ajeet Bairwa — All Rights Reserved.
+
+        {/* Divider */}
+        <div className="w-full h-px bg-primary/10 mt-8 mb-4" />
+
+        {/* Copyright */}
+        <div className="flex flex-col md:flex-row items-center justify-between gap-2 text-primary/30 text-xs">
+          <p>&copy; {new Date().getFullYear()} Ajeet Bairwa. All rights reserved.</p>
+          <p className="flex items-center gap-1">
+            Built with <Heart size={12} className="text-red-400" /> and React
+          </p>
         </div>
-      </footer>
-    </>
+      </div>
+    </footer>
   );
 }
+
 export default Footer;

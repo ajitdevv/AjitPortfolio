@@ -1,4 +1,5 @@
 import { MoveDown } from "lucide-react";
+import { useEffect, useState } from "react";
 import { useTypewriter, useScrollReveal } from "../hooks/useAnimations";
 
 function HeroSection() {
@@ -11,11 +12,18 @@ function HeroSection() {
 
   const [subtitleRef, subtitleVisible] = useScrollReveal();
   const [btnRef, btnVisible] = useScrollReveal();
+  const [showScroll, setShowScroll] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => setShowScroll(window.scrollY < 100);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <section
       id="home"
-      className="min-h-screen flex flex-col items-center justify-center relative px-6 overflow-hidden"
+      className="min-h-screen flex flex-col items-center justify-center relative px-6 pt-20 md:pt-0"
     >
       {/* Background glow blobs */}
       <div className="absolute top-1/4 left-1/4 -translate-x-1/2 w-72 h-72 md:w-[500px] md:h-[500px] rounded-full bg-primary-foreground/8 blur-[100px] pointer-events-none" />
@@ -23,13 +31,6 @@ function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center max-w-2xl text-center">
-        {/* Badge */}
-        <div className="glass-subtle rounded-full px-4 py-1.5 mb-6">
-          <span className="text-primary/60 text-xs md:text-sm font-medium tracking-wide">
-            Available for freelance work
-          </span>
-        </div>
-
         {/* Main heading */}
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-primary">
           Hi, I'm a
@@ -69,12 +70,16 @@ function HeroSection() {
             Contact Me
           </a>
         </div>
-      </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center animate-bounce">
-        <span className="text-primary/30 text-xs mb-1">Scroll</span>
-        <MoveDown className="h-4 w-4 text-primary/30" />
+        {/* Scroll indicator — below content, fades out on scroll */}
+        <div
+          className={`mt-12 flex flex-col items-center animate-bounce transition-opacity duration-500 ${
+            showScroll ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <span className="text-primary/30 text-xs mb-1">Scroll</span>
+          <MoveDown className="h-4 w-4 text-primary/30" />
+        </div>
       </div>
     </section>
   );

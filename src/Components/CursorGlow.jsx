@@ -40,7 +40,6 @@ function CursorGlow() {
     };
   }, []);
 
-  // Clean up old trail points
   useEffect(() => {
     const interval = setInterval(() => {
       trailRef.current = trailRef.current.slice(0, 4);

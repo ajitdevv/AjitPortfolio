@@ -69,9 +69,7 @@ function CursorGlow() {
           }}
         />
       ))}
-
-      {/* Main glow blob */}
-      <div
+<div
         className="absolute rounded-full"
         style={{
           left: pos.x - size / 2,

@@ -73,7 +73,7 @@ function Navbar() {
   // Mobile menu rendered via portal so it's not clipped by nav's transform
   const mobileMenu = createPortal(
     <div
-      className={`fixed inset-0 z-[150] md:hidden transition-all duration-400 ${
+      className={`fixed inset-0 z-150 md:hidden transition-all duration-400 ${
         isMenuOpen ? "visible pointer-events-auto" : "invisible pointer-events-none"
       }`}
     >
@@ -152,7 +152,7 @@ function Navbar() {
   return (
     <>
       <nav
-        className={`fixed left-1/2 -translate-x-1/2 z-[100] transition-all duration-700 ease-[cubic-bezier(0.25,0.8,0.25,1)] ${
+        className={`fixed left-1/2 -translate-x-1/2 z-100 transition-all duration-700 ease-[cubic-bezier(0.25,0.8,0.25,1)] ${
           scrolled
             ? "top-0 w-full"
             : "top-3 md:top-4 w-[94%] md:w-[80%] lg:w-[70%]"
@@ -161,7 +161,7 @@ function Navbar() {
         <div
           className={`flex items-center justify-between px-4 py-2.5 md:px-6 md:py-3 transition-all duration-700 ${
             scrolled
-              ? "glass-strong shadow-lg rounded-none"
+              ? "backdrop-blur-xs shadow-lg rounded-none"
               : "glass rounded-2xl"
           }`}
         >
